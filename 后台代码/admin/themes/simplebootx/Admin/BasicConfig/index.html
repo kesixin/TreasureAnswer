@@ -1,0 +1,490 @@
+<admintpl file="header" />
+<style type="text/css">
+	.nav-tabs>li>a {
+		color: #95a5a6;
+	}
+	.nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus {
+		color: #39f;
+		background-color: transparent;
+		border: none;
+	}
+	.btn-primary {
+		background: #66CCFF;
+	}
+	.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+	    background-color: #4d94b7;
+	}
+	.form-actions {
+		background-color: transparent;
+	}
+	.pagination>a {
+	  color: #39f;
+	}
+	.table-bordered {
+        border-collapse: collapse;
+    }
+    .table-bordered tr>th {
+        color: #39f;
+    }
+</style>
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#A" data-toggle="tab">小程序设置</a></li>
+			<li><a href="#B" data-toggle="tab">支付配置</a></li>
+	<!-- 		<li><a href="#C" data-toggle="tab">小程序配置</a></li> -->
+			<li><a href="#D" data-toggle="tab">红包设置</a></li>
+	<!-- 		<li><a href="#E" data-toggle="tab">提现设置</a></li> -->
+			<li><a href="#F" data-toggle="tab">客服自动回复</a></li>
+			<li><a href="#G" data-toggle="tab">游戏参数设置</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-forms" action="{:U('BasicConfig/site_post')}" onsubmit="checkForm()" method="post">
+			<fieldset>
+				<div class="tabbable">
+					<div class="tab-content">
+						<div class="tab-pane active" id="A">
+							<fieldset>
+								<div class="control-group">
+									<label class="control-label">小程序名称</label>
+									<div class="controls">
+										<input type="text" name="options[site_name]" aria-required="true" value="{$site_name}"><span class="form-required">*</span>
+										<php>if($option_id):</php>
+										<input type="hidden" name="option_id" value="{$option_id}">
+										<php>endif;</php>
+									</div>
+								</div>
+
+								<div class="control-group">
+									<label class="control-label">备案信息</label>
+									<div class="controls">
+										<input type="text" name="options[site_icp]" value="{$site_icp}">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">统计代码</label>
+									<div class="controls">
+										<textarea name="options[site_tongji]" rows="5" cols="57">{$site_tongji}</textarea>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">版权信息</label>
+									<div class="controls">
+										<textarea name="options[site_copyright]" rows="5" cols="57">{$site_copyright}</textarea>
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label">小程序AppID</label>
+									<div class="controls">
+										<input type="text" name="options[C_APPID]" value="{$C_APPID}">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">小程序AppSecret</label>
+									<div class="controls">
+										<input type="text" name="options[C_APPSECRET]" value="{$C_APPSECRET}">
+									</div>
+								</div>
+								<!-- <div class="control-group">
+									<label class="control-label">小程序跳转链接</label>
+									<div class="controls">
+										<input type="text" name="options[C_JUMP]" placeholder="pages/index/index?id=123" value="{$C_JUMP}">
+									</div>
+								</div> -->
+								<div class="control-group" style="display:none;">
+									<label class="control-label">消息推送模板id</label>
+									<div class="controls">
+										<textarea rows="10" style="min-width: 500px; width:50%;" name="options[new_tpl]" placeholder="key : val">{$new_tpl}</textarea>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="B">
+							<fieldset>
+								<!-- <div class="control-group">
+									<label class="control-label">公众号AppID</label>
+									<div class="controls">
+										<input type="text" name="options[G_APPID]" value="{$G_APPID}">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">公众号AppSecret</label>
+									<div class="controls">
+										<input type="text" name="options[G_APPSECRET]" value="{$G_APPSECRET}">
+									</div>
+								</div> -->
+								<div class="control-group">
+									<label class="control-label">普通商户号(mchid)</label>
+									<div class="controls">
+										<input type="text" name="options[G_MCHID]" value="{$G_MCHID}">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">普通商户密钥（key）</label>
+									<div class="controls">
+										<input type="text" name="options[G_KEY]" value="{$G_KEY}">
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="C">
+							<fieldset>
+								
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="D">
+							<fieldset>
+								<div class="control-group" style="display: none;">
+									<label class="control-label">红包佣金比例</label>
+									<div class="controls">
+										<input type="text" name="options[commision]" value="{$commision}"> % （建议2%-12%之间）
+									</div>
+								</div>
+								<div class="control-group" style="display:none;">
+									<label class="control-label">广告红包佣金比例</label>
+									<div class="controls">
+										<input type="text" name="options[advcommision]" value="{$advcommision}"> % （建议2%-12%之间）
+									</div>
+								</div>
+								<div class="control-group" style="display: none;">
+									<label class="control-label">红包最低金额</label>
+									<div class="controls">
+										<input type="text" name="options[amount_min]" value="{$amount_min}"> （建议1以上）
+									</div>
+								</div>
+								<div class="control-group" style="display:none;">
+									<label class="control-label">广告红包最低金额</label>
+									<div class="controls">
+										<input type="text" name="options[hbadv_min]" value="{$hbadv_min}"> % （建议2%-12%之间）
+									</div>
+								</div>
+								<!-- <div class="control-group">
+									<label class="control-label">分享广场最低金额</label>
+									<div class="controls">
+										<input type="text" name="options[hbshare_min]" value="{$hbshare_min}"> % （建议2%-12%之间）
+									</div>
+								</div> -->
+								<div class="control-group" style="display: none;">
+									<label class="control-label">领红包最低金额</label>
+									<div class="controls">
+										<input type="text" name="options[receive_amount_min]" value="{$receive_amount_min}"> （建议1以上）
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">平台红包昵称</label>
+									<div class="controls">
+										<input type="text" name="options[pt_nick_name]" value="{$pt_nick_name}">
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">平台红包挑战语</label>
+									<div class="controls">
+										<input type="text" name="options[pt_challenge_txt]" value="{$pt_challenge_txt}">
+									</div>
+								</div>
+								<div class="control-group" style="display: none;">
+									<label class="control-label">红包审核</label>
+									<div class="controls">
+										<label class="radio inline" for="active_true"><input
+											type="radio" name="options[audit]" value="1" <if condition="$audit eq 1 ">checked="checked"</if>
+											id="active_true">开启</label> <label class="radio inline"
+											for="active_false"><input type="radio" name="options[audit]" <if condition="$audit eq 0 ">checked="checked"</if>
+											value="0" id="active_false">禁用</label>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="E">
+							<fieldset>
+								<div class="control-group">
+									<label class="control-label">最低提现金额</label>
+									<div class="controls">
+										<input type="text" name="options[min_withdrawals]" value="{$min_withdrawals}"> 单位（元）
+									</div>
+								</div>
+
+								<div class="control-group">
+									<label class="control-label">每天提现次数上限</label>
+									<div class="controls">
+										<input type="text" name="options[max_withdrawal_time]" value="{$max_withdrawal_time}"> 次
+									</div>
+								</div>
+
+							<!-- 	<div class="control-group">
+									<label class="control-label">提现手续费</label>
+									<div class="controls">
+										<input type="text" name="options[withdrawal_commission]" value="{$withdrawal_commission}"> 如0.02 范围:1 - 0.01
+									</div>
+								</div> -->
+
+							</fieldset>
+						</div>
+						<div class="tab-pane" id="F">
+							<fieldset>
+								<div class="control-group">
+									<label class="control-label">标题</label>
+									<div class="controls">
+										<input type="text" id="hf_title" name="options[title]" value="{$title}">
+									</div>
+								</div>
+
+								<div class="control-group">
+									<label class="control-label">描述</label>
+									<div class="controls">
+										<input type="text" id="hf_description" name="options[description]" value="{$description}">
+									</div>
+								</div>
+
+								<div class="control-group">
+									<label class="control-label">链接</label>
+									<div class="controls">
+										<input type="text" id="hf_url" name="options[url]" value="{$url}">
+									</div>
+								</div>
+
+								<div style="/*text-align: center;*/margin-left: 180px;">
+									<input type="hidden" name="options[imgurl]" id="thumb" value="{$imgurl}">
+									<a href="javascript:upload_one_image('图片上传','#thumb');">
+									<if condition="empty($imgurl)">
+									<img src="/admin/themes/simplebootx/Public/assets/images/default-thumbnail.png" id="thumb-preview" width="135" style="cursor: hand; height: 113px;">									</a>
+									<else />
+									<img src="{$imgurl}" id="thumb-preview" width="135" style="cursor: hand; height: 113px;">									</a>
+									</if>
+									<input type="button" class="btn btn-small" onclick="$('#thumb-preview').attr('src','/admin/themes/simplebootx/Public/assets/images/default-thumbnail.png');$('#thumb').val('');return false;" value="取消图片">
+								</div>
+								效果如下：
+								<div style="
+    margin-top: 20px;
+    width: 277px;
+    margin-left: 179px;
+"><img src="__ROOT__/data/upload/kfzdhf.jpg"></div>
+							</fieldset>
+						</div>
+						<!-- 
+						<div class="tab-pane" id="G">
+							<fieldset>
+
+								<div style="text-align: center;">
+									<input type="hidden" name="options[backimgurl]" id="backthumb" value="{$backimgurl}">
+									<a href="javascript:upload_one_image('图片上传','#backthumb');">
+									<if condition="empty($backimgurl)">
+									<img src="/admin/themes/simplebootx/Public/assets/images/default-thumbnail.png" id="thumb-preview" width="135" style="cursor: hand; height: 113px;">									</a>
+									<else />
+									<img src="{$backimgurl}" id="backthumb-preview" width="135" style="cursor: hand; height: 113px;">									</a>
+									</if>
+									<input type="button" class="btn btn-small" onclick="$('#backthumb-preview').attr('src','/admin/themes/simplebootx/Public/assets/images/default-thumbnail.png');$('#backthumb').val('');return false;" value="取消图片">
+								</div>
+							</fieldset>
+						</div> -->
+						
+						<div class="tab-pane" id="G">
+							<fieldset>
+								
+								
+								<div class="control-group">
+									<label class="control-label">红包金额区间</label>
+									<div class="controls">
+										<input type="text" name="options[hb_amount_min]" value="{$hb_amount_min}">- <input type="text" name="options[hb_amount_max]" value="{$hb_amount_max}">元
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label">更多游戏</label>
+									<div class="controls">
+										<select name="options[moreGameFlag]">
+									<option <if condition="$moreGameFlag eq 0">selected="selected"</if> value="0">关</option>
+									<option <if condition="$moreGameFlag eq 1">selected="selected"</if> value="1">开</option>
+								</select>
+									</div>
+								</div>
+								
+								<div class="control-group" style="display:none;">
+									<label class="control-label">答题界面标语</label>
+									<div class="controls">
+										<textarea rows="10" style="min-width: 500px; width:50%;" name="options[gameruletxt]" placeholder="用{jige}表示过关分数">{$gameruletxt}</textarea>
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label">游戏规则</label>
+									<div class="controls">
+										<textarea rows="10" style="min-width: 500px; width:50%;" name="options[gamerule]" placeholder="">{$gamerule}</textarea><br><span style="color:red;">（多条游戏规则可以用英文逗号“,”分割）</span>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">游戏福利</label>
+									<div class="controls">
+										<textarea rows="10" style="min-width: 500px; width:50%;" name="options[gamefuli]" placeholder="">{$gamefuli}</textarea>
+									</div>
+								</div>
+
+							</fieldset>
+						</div>
+						
+						<div class="tab-pane" id="H">
+							<fieldset>
+								<div class="control-group">
+									<label class="control-label">静态资源cdn地址</label>
+									<div class="controls">
+										<input type="text" name="cdn_settings[cdn_static_root]" value="{$cdn_settings.cdn_static_root}">
+										<span class="help-block">
+											不能以/结尾；设置这个地址后，请将ThinkCMF下的静态资源文件放在其下面；<br>
+											ThinkCMF下的静态资源文件大致包含以下(如果你自定义后，请自行增加)：<br>
+											admin/themes/simplebootx/Public/assets<br>
+											public<br>
+											themes/simplebootx/Public/assets<br>
+											例如未设置cdn前：jquery的访问地址是/public/js/jquery.js, 设置cdn是后它的访问地址就是：静态资源cdn地址+/public/js/jquery.js
+
+										</span>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary  js-ajax-submit">{:L("SAVE")}</button>
+				</div>
+			</fieldset>
+		</form>
+
+	</div>
+	<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+	<script>
+		/////---------------------
+
+		$(function(){
+			$("#urlmode-select").change(function(){
+				if($(this).val()==1){
+					alert("更改后，若发现前台链接不能正常访问，可能是您的服务器不支持PATHINFO，请先修改data/conf/config.php文件的URL_MODEL为0保证网站正常运行,在配置服务器PATHINFO功能后再更新为PATHINFO模式！");
+				}
+
+				if($(this).val()==2){
+					alert("更改后，若发现前台链接不能正常访问，可能是您的服务器不支持REWRITE，请先修改data/conf/config.php文件的URL_MODEL为0保证网站正常运行，在开启服务器REWRITE功能后再更新为REWRITE模式！");
+				}
+			});
+			$("#js-site-admin-url-password").change(function(){
+				$(this).data("changed",true);
+			});
+		});
+		Wind.use('validate', 'ajaxForm', 'artDialog', function() {
+			//javascript
+			var form = $('form.js-ajax-forms');
+			//ie处理placeholder提交问题
+			if ($.browser && $.browser.msie) {
+				form.find('[placeholder]').each(function() {
+					var input = $(this);
+					if (input.val() == input.attr('placeholder')) {
+						input.val('');
+					}
+				});
+			}
+
+
+
+			//表单验证开始
+			form.validate({
+				//是否在获取焦点时验证
+				onfocusout : false,
+				//是否在敲击键盘时验证
+				onkeyup : false,
+				//当鼠标掉级时验证
+				onclick : false,
+				//验证错误
+				showErrors : function(errorMap, errorArr) {
+					//errorMap {'name':'错误信息'}
+					//errorArr [{'message':'错误信息',element:({})}]
+					try {
+						$(errorArr[0].element).focus();
+						art.dialog({
+							id : 'error',
+							icon : 'error',
+							lock : true,
+							fixed : true,
+							background : "#CCCCCC",
+							opacity : 0,
+							content : errorArr[0].message,
+							cancelVal : "{:L('OK')}",
+							cancel : function() {
+								$(errorArr[0].element).focus();
+							}
+						});
+					} catch (err) {
+					}
+				},
+				//验证规则
+				rules : {
+					'options[site_name]' : {
+						required : 1
+					},
+					'options[site_host]' : {
+						required : 1
+					},
+					'options[site_root]' : {
+						required : 1
+					}
+				},
+				//验证未通过提示消息
+				messages : {
+					'options[site_name]' : {
+						required : "请填写网站名称"
+					}
+				},
+				//给未通过验证的元素加效果,闪烁等
+				highlight : false,
+				//是否在获取焦点时验证
+				onfocusout : false,
+				//验证通过，提交表单
+				submitHandler : function(forms) {
+					$(forms).ajaxSubmit({
+						url : form.attr('action'), //按钮上是否自定义提交地址(多按钮情况)
+						dataType : 'json',
+						beforeSubmit : function(arr, $form, options) {
+
+						},
+						success : function(data, statusText, xhr, $form) {
+							if (data.status) {
+								setCookie("refersh_time", 1);
+								var admin_url_changed=$("#js-site-admin-url-password").data("changed");
+								var message =admin_url_changed?data.info+'<br><span style="color:red;">后台地址已更新(请劳记！)</span>':data.info;
+
+								//添加成功
+								Wind.use("artDialog", function() {
+									art.dialog({
+										id : "succeed",
+										icon : "succeed",
+										fixed : true,
+										lock : true,
+										background : "#CCCCCC",
+										opacity : 0,
+										content : message,
+										button : [ {
+											name : "{:L('OK')}",
+											callback : function() {
+												reloadPage(window);
+												return true;
+											},
+											focus : true
+										}, {
+											name : "{:L('CLOSE')}",
+											callback : function() {
+												reloadPage(window);
+												return true;
+											}
+										} ]
+									});
+								});
+							} else {
+								alert(data.info);
+							}
+						}
+					});
+				}
+			});
+		});
+		////-------------------------
+	</script>
+</body>
+</html>

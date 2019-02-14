@@ -1,0 +1,369 @@
+<admintpl file="header" />
+<style type="text/css">
+	.nav-tabs>li>a {
+		color: #95a5a6;
+	}
+	.nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus {
+		color: #39f;
+		background-color: transparent;
+		border: none;
+	}
+	.btn-primary {
+		background: #66CCFF;
+	}
+	.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+	    background-color: #4d94b7;
+	}
+	.form-actions {
+		background-color: transparent;
+	}
+	.pagination>a {
+	  color: #39f;
+	}
+	.table-bordered {
+        border-collapse: collapse;
+    }
+    .table-bordered tr>th {
+        color: #39f;
+    }
+</style>
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+<!-- 			<li class="active"><a href="#A" data-toggle="tab">网站基本设置</a></li>
+			<li><a href="#B" data-toggle="tab">支付配置</a></li>
+			<li><a href="#C" data-toggle="tab">小程序配置</a></li> -->
+			<li class="active"><a href="#A" data-toggle="tab">红包设置</a></li>
+<!-- 			<li><a href="#E" data-toggle="tab">提现设置</a></li>
+			<li><a href="#F" data-toggle="tab">客服自动回复</a></li>
+			<li><a href="#G" data-toggle="tab">游戏参数设置</a></li> -->
+		</ul>
+		<form class="form-horizontal js-ajax-forms" action="{:U('Enve/add')}" method="post">
+			<fieldset>
+				<div class="tabbable">
+					<div class="tab-content">
+						
+						<div class="tab-pane active" id="A">
+							<fieldset>
+							<div class="control-group">
+									<label class="control-label">活动名称</label>
+									<div class="controls">
+										<input type="text" name="enve_name" value="">
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label">红包个数</label>
+									<div class="controls">
+										<input type="text" name="num" value="">
+									</div>
+								</div>
+								
+								
+
+							</fieldset>
+						</div>
+						
+						
+					</div>
+				</div>
+
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary  js-ajax-submit">新建红包</button>
+				</div>
+			</fieldset>
+			<div style="color:red;">注意：输入活动名称和红包发放个数添加新的活动后，旧的活动将被新建的替换。</div>
+		</form>
+
+<!-- 
+<fieldset>
+								
+
+<div class="control-group">
+									<label class="control-label">当前红包ID</label>
+									<div class="controls">
+										<input type="text" name="pid" readonly="readonly" value="{$enveInfo.id}">
+									</div>
+								</div>
+
+<div class="control-group">
+									<label class="control-label">红包总个数</label>
+									<div class="controls">
+										<input type="text" name="num" readonly="readonly" value="{$enveInfo.num}">
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label">已领取个数</label>
+									<div class="controls">
+										<input type="text" name="receive_num" readonly="readonly" value="{$enveInfo.receive_num}">
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label">已领取总金额</label>
+									<div class="controls">
+										<input type="text" name="receive_num" readonly="readonly" value="{$totalEnveAmount}">元
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label">通过次数</label>
+									<div class="controls">
+										<input type="text" name="receive_num" readonly="readonly" value="{$pass}">
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label">失败次数</label>
+									<div class="controls">
+										<input type="text" name="receive_num" readonly="readonly" value="{$notpass}">
+									</div>
+								</div>
+
+							</fieldset>
+
+
+
+	</div> -->
+	
+	
+	<div class="wrap js-check-wrap">
+	<!-- 	<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('Customer/index')}">用户列表</a></li>
+		</ul> 
+        <form class="well form-search" method="get" action="{:U('Enve/add')}">
+            <!-- 请输入OpenId:
+            <input type="text" name="openid" style="width: 100px;" value="{:I('request.openid/s','')}" placeholder="请输入OpenId">
+			关键字:
+            <input type="text" name="keywork" style="width: 200px;" value="{:I('request.keywork/s','')}" placeholder="请出入活动名称">
+            <input type="submit" class="btn btn-primary" value="搜索" />
+            <a class="btn btn-danger" href="{:U('Enve/add')}">清空</a>
+            
+        </form>-->
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>活动名称</th>
+					<th>红包数量</th>
+					<th>已领取数量</th>
+					<th>通过次数</th>
+		 			<th>失败次数</th>
+		 			<th>开始时间</th>
+		 			<th>结束时间</th>
+			<!-- 	<th>电话</th> -->
+					<th>状态</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="allEnve" item="vo">
+				<tr>
+					<td class="pid">{$vo.id}</td>
+					<td>{$vo.enve_name}</td>
+					<td>{$vo.num}</td>
+					<td>{$vo.receive_num}</td>
+					<td>{$vo.pass}</td>
+		 			<td class="openid">{$vo.notpass}</td>
+		 			<td>{$vo.add_time}</td>
+		 			<td><notempty name="$vo.end_time">{$vo.end_time}</notempty></td>
+		<!--			<td>{$vo.phone}</td> -->
+					<td><if condition="$vo.be_overdue eq 0" >未过期<else />已过期</if></td>
+					<td><!--
+						<button class="add-to-vip btn btn-sm btn-default btn-danger">加入vip</button>
+						<button class="remove-from-vip btn btn-sm btn-default btn-default">移除vip</button>-->
+						<if condition="$vo.status neq 0 ">
+						<button class="disable-from-enve btn btn-sm btn-default btn-danger">结束</button>
+						</if>
+						<if condition="$vo.status eq 2" >
+							<button class="startup-from-enve btn btn-sm btn-default btn-danger">开始</button>
+						<elseif condition="$vo.status eq 1" />
+							<button class="pause-from-enve btn btn-sm btn-default btn-danger">暂停</button>
+						</if>
+					</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+		<div class="pagination">{$page}</div>
+	</div>
+	
+	
+	
+	<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+	<script>
+		/////---------------------
+
+		$(function(){
+			$("#urlmode-select").change(function(){
+				if($(this).val()==1){
+					alert("更改后，若发现前台链接不能正常访问，可能是您的服务器不支持PATHINFO，请先修改data/conf/config.php文件的URL_MODEL为0保证网站正常运行,在配置服务器PATHINFO功能后再更新为PATHINFO模式！");
+				}
+
+				if($(this).val()==2){
+					alert("更改后，若发现前台链接不能正常访问，可能是您的服务器不支持REWRITE，请先修改data/conf/config.php文件的URL_MODEL为0保证网站正常运行，在开启服务器REWRITE功能后再更新为REWRITE模式！");
+				}
+			});
+			$("#js-site-admin-url-password").change(function(){
+				$(this).data("changed",true);
+			});
+		});
+		Wind.use('validate', 'ajaxForm', 'artDialog', function() {
+			//javascript
+			var form = $('form.js-ajax-forms');
+			//ie处理placeholder提交问题
+			if ($.browser && $.browser.msie) {
+				form.find('[placeholder]').each(function() {
+					var input = $(this);
+					if (input.val() == input.attr('placeholder')) {
+						input.val('');
+					}
+				});
+			}
+
+
+
+			//表单验证开始
+			form.validate({
+				//是否在获取焦点时验证
+				onfocusout : false,
+				//是否在敲击键盘时验证
+				onkeyup : false,
+				//当鼠标掉级时验证
+				onclick : false,
+				//验证错误
+				showErrors : function(errorMap, errorArr) {
+					//errorMap {'name':'错误信息'}
+					//errorArr [{'message':'错误信息',element:({})}]
+					try {
+						$(errorArr[0].element).focus();
+						art.dialog({
+							id : 'error',
+							icon : 'error',
+							lock : true,
+							fixed : true,
+							background : "#CCCCCC",
+							opacity : 0,
+							content : errorArr[0].message,
+							cancelVal : "{:L('OK')}",
+							cancel : function() {
+								$(errorArr[0].element).focus();
+							}
+						});
+					} catch (err) {
+					}
+				},
+				//验证规则
+				rules : {
+					'options[site_name]' : {
+						required : 1
+					},
+					'options[site_host]' : {
+						required : 1
+					},
+					'options[site_root]' : {
+						required : 1
+					}
+				},
+				//验证未通过提示消息
+				messages : {
+					'options[site_name]' : {
+						required : "请填写网站名称"
+					}
+				},
+				//给未通过验证的元素加效果,闪烁等
+				highlight : false,
+				//是否在获取焦点时验证
+				onfocusout : false,
+				//验证通过，提交表单
+				submitHandler : function(forms) {
+					$(forms).ajaxSubmit({
+						url : form.attr('action'), //按钮上是否自定义提交地址(多按钮情况)
+						dataType : 'json',
+						beforeSubmit : function(arr, $form, options) {
+
+						},
+						success : function(data, statusText, xhr, $form) {
+							if (data.status) {
+								setCookie("refersh_time", 1);
+								var admin_url_changed=$("#js-site-admin-url-password").data("changed");
+								var message =admin_url_changed?data.info+'<br><span style="color:red;">后台地址已更新(请劳记！)</span>':data.info;
+
+								//添加成功
+								Wind.use("artDialog", function() {
+									art.dialog({
+										id : "succeed",
+										icon : "succeed",
+										fixed : true,
+										lock : true,
+										background : "#CCCCCC",
+										opacity : 0,
+										content : message,
+										button : [ {
+											name : "{:L('OK')}",
+											callback : function() {
+												reloadPage(window);
+												return true;
+											},
+											focus : true
+										}, {
+											name : "{:L('CLOSE')}",
+											callback : function() {
+												reloadPage(window);
+												return true;
+											}
+										} ]
+									});
+								});
+							} else {
+								alert(data.info);
+								location.reload();
+							}
+						}
+					});
+				}
+			});
+		});
+		////-------------------------
+		
+		//禁用用户
+		$('.disable-from-enve').on('click', function() {
+		    var pid = $(this).parents('tr').find('.pid').text();
+			$.post("{:U('Enve/disableEnve')}", {'id':pid}, function (data) {
+				if(data.result){
+		    		alert(data.msg);
+		    		location.reload();
+		    		return;
+		    	}
+				alert(data.msg);
+			});
+		});
+		//启动活动
+		$('.startup-from-enve').on('click', function() {
+		    var pid = $(this).parents('tr').find('.pid').text();
+			$.post("{:U('Enve/startupEnve')}", {'id':pid}, function (data) {
+				if(data.result){
+		    		alert(data.msg);
+		    		location.reload();
+		    		return;
+		    	}
+				alert(data.msg);
+			});
+		});
+		//暂停活动
+		$('.pause-from-enve').on('click', function() {
+		    var pid = $(this).parents('tr').find('.pid').text();
+			$.post("{:U('Enve/pauseEnve')}", {'id':pid}, function (data) {
+				if(data.result){
+		    		alert(data.msg);
+		    		location.reload();
+		    		return;
+		    	}
+				alert(data.msg);
+			});
+		});
+	</script>
+</body>
+</html>

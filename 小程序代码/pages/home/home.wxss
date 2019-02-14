@@ -1,0 +1,20 @@
+/**home.wxss**/
+.container{
+  font-family: Microsoft YaHei;
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+  padding: 0;
+  position: absolute;
+}
+.container image{
+  width: 750rpx;
+  height: 2750rpx;
+}
+.container .phone{
+  position: absolute;
+  bottom: 70rpx;
+  left:0;
+  width:45%;
+  height:30rpx;
+}

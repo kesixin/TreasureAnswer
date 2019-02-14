@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>智慧云夺题答宝-后台管理系统</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="__PUBLIC__/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="__PUBLIC__/adminlte/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="__PUBLIC__/adminlte/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="__PUBLIC__/adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="__PUBLIC__/adminlte/bower_components/Buttons-1.5.1/css/buttons.bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="__PUBLIC__/adminlte/dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="__PUBLIC__/adminlte/dist/css/skins/_all-skins.css">
+<!--   <link rel="stylesheet" href="__PUBLIC__/adminlte/dist/css/skins/me_all-skins.css"> -->
+
+  <!-- 双向日历选择器 -->
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/adminlte/bower_components/picket_date/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/adminlte/bower_components/picket_date/daterangepicker.css">
+
+  <link rel="stylesheet" href="__PUBLIC__/adminlte/dist/css/common.css">
+
+  <style>
+  .dataTablelayout {float: right; margin-left: 30px}
+  </style>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <!-- Sidebar user panel -->
+      <div class="user-panel logo">
+        <div class="pull-left image">
+          <img src="__PUBLIC__/adminlte/dist/img/user2-160x160.jpg" alt="User Image">   <!-- class="img-circle" -->
+        </div>
+        <div class="pull-left info">
+          <p>夺宝答题后台</p>
+        </div>
+      </div>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <!-- <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a> -->
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-danger">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">4</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="__PUBLIC__/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Support Team
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="__PUBLIC__/adminlte/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        AdminLTE Design Team
+                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="__PUBLIC__/adminlte/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Developers
+                        <small><i class="fa fa-clock-o"></i> Today</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="__PUBLIC__/adminlte/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Sales Department
+                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="__PUBLIC__/adminlte/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Reviewers
+                        <small><i class="fa fa-clock-o"></i> 2 days</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-success">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 10 notifications</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                      page and may cause design problems
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-red"></i> 5 new members joined
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-user text-red"></i> You changed your username
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="hidden-xs">Admin</span>
+              <img src="__PUBLIC__/adminlte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+            </a>
+          </li>
+          <li class="dropdown user user-menu">
+            <a href="#" class="sidebar-toggle sdropdown-toggle" data-toggle="dropdown">
+            </a>
+            <ul class="dropdown-menu">
+              <div style="line-height: 0; padding-right: 8px; overflow: hidden; text-align: right;"><img src="__PUBLIC__/adminlte/dist/img/triangle.png"></div>
+              <li class="first-child"><a><i class="fa fa-cog"></i>设置</a></li>
+              <li><a><i class="fa fa-lock"></i>修改密码</a></li>
+              <li><a><i class="fa fa-power-off"></i>退出登录</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- <li class="header">主导航</li> -->
+        <!-- 多个菜单 -->
+        <li class="treeview menu-open">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>统计分析</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="display: block;">
+            <li><a class="active" href="index">概况统计</a></li>
+            <li><a href="statsReply">答对率统计</a></li>
+          </ul>
+        </li>
+        <!-- /多个菜单 -->
+        <!-- 单个菜单 -->
+         <li>
+          <a href="Gsetting">
+            <i class="fa fa-gamepad"></i> <span>游戏设置</span>
+          </a>
+        </li>
+        <!-- /单个菜单 -->
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-th"></i> <span>题库管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="TKdisplay">题库展示</a></li>
+            <li><a href="typeIndex">题库设置</a></li>
+            <li><a href="TKinto">题库导入</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-address-book-o"></i> <span>中奖管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="Psetting">奖品设置</a></li>
+            <li><a href="Pdetail">中奖明细</a></li>
+            <li><a href="Plogic">物流管理</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="Paydetail">
+            <i class="fa fa-th"></i> <span>支付明细</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="TGsetting">
+            <i class="fa fa-th"></i> <span>推广设置</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="APPsetting">
+            <i class="fa fa-th"></i> <span>小程序设置</span>
+          </a>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-th"></i> <span>基本设置</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="Paysetting">支付设置</a></li>
+            <li><a href="Custsetting">客服自动回复设置</a></li>
+          </ul>
+        </li>
+
+
+        <!-- <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+        <li class="header">LABELS</li>
+        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li> -->
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h3>
+        概况统计
+        <small></small>
+      </h3>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box box2">
+            <ul class="index_block_data">
+              <li class="li1">
+                <h2>23,41个</h2>
+                <p>总用户数</p>
+              </li>
+              <li class="li2">
+                <h2>23,41个</h2>
+                <p>新增用户数</p>
+              </li>
+              <li class="li3">
+                <h2>23,41次</h2>
+                <p>总参赛次数</p>
+              </li>
+              <li class="li4">
+                <h2>23,41次</h2>
+                <p>总挑战成功次数</p>
+              </li>
+              <li class="li5">
+                <h2>23,41元</h2>
+                <p>复活卡总收入</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 用户增长趋势表 start -->
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title box-title1">用户增长趋势表</h3>
+            </div>
+            <div class="box-body">
+              <div class="contain">
+                <div class="col-xs-12">
+                  <div class="bjui-pageContent">
+                    <div class="form-group d_t_dater">
+                      <label class="col-sm-3 control-label"></label>
+                      <div class="col-sm-12">
+                        <div class="input-group">
+                          <p style="display: inline-block;">时间段:　</p>
+                          <button type="button" class="btn btn-default" style="border: 1px solid #eee; color: #666" id="daterange-btn1">
+                            <span>
+                              <i class="icon iconfont icon-calendar1"></i> 日期选择
+                            </span>
+                            <i class="icon iconfont icon-danxian-youjiantou-copy"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div id="sheet1" style="width: 100%;height:400px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 用户增长趋势表 end -->
+
+          <!-- 参赛次数增长趋势表 start -->
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title box-title2">参赛次数增长趋势表</h3>
+            </div>
+            <div class="box-body">
+              <div class="contain">
+                <div class="col-xs-12">
+                  <div class="bjui-pageContent">
+                    <div class="form-group d_t_dater">
+                      <label class="col-sm-3 control-label"></label>
+                      <div class="col-sm-12">
+                        <div class="input-group">
+                          <p style="display: inline-block;">时间段:　</p>
+                          <button type="button" class="btn btn-default" style="border: 1px solid #eee; color: #666" id="daterange-btn2">
+                            <span>
+                              <i class="icon iconfont icon-calendar1"></i> 日期选择
+                            </span>
+                            <i class="icon iconfont icon-danxian-youjiantou-copy"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div id="sheet2" style="width: 100%;height:400px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 参赛次数增长趋势表 end -->
+
+          <!-- 复活卡总收入增长趋势表 start -->
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title box-title3">复活卡总收入增长趋势表</h3>
+            </div>
+            <div class="box-body">
+              <div class="contain">
+                <div class="col-xs-12">
+                  <div class="bjui-pageContent">
+                    <div class="form-group d_t_dater">
+                      <label class="col-sm-3 control-label"></label>
+                      <div class="col-sm-12">
+                        <div class="input-group">
+                          <p style="display: inline-block;">时间段:　</p>
+                          <button type="button" class="btn btn-default" style="border: 1px solid #eee; color: #666" id="daterange-btn3">
+                            <span>
+                              <i class="icon iconfont icon-calendar1"></i> 日期选择
+                            </span>
+                            <i class="icon iconfont icon-danxian-youjiantou-copy"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12">
+                  <div id="sheet3" style="width: 100%;height:400px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 复活卡总收入增长趋势表 end -->
+
+
+
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-user bg-yellow"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                <p>New phone +1(800)555-1234</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                <p>nora@example.com</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                <p>Execution time 5 seconds</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="label label-danger pull-right">70%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Update Resume
+                <span class="label label-success pull-right">95%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Laravel Integration
+                <span class="label label-warning pull-right">50%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Back End Framework
+                <span class="label label-primary pull-right">68%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Allow mail redirect
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Other sets of options are available
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Expose author name in posts
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Allow the user to show his name in blog posts
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Show me as online
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Turn off notifications
+              <input type="checkbox" class="pull-right">
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Delete chat history
+              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+            </label>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <!-- <div class="control-sidebar-bg"></div> -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="__PUBLIC__/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="__PUBLIC__/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="__PUBLIC__/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="__PUBLIC__/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="__PUBLIC__/adminlte/bower_components/Buttons-1.5.1/js/dataTables.buttons.min.js"></script>
+<script src="__PUBLIC__/adminlte/bower_components/Buttons-1.5.1/js/buttons.bootstrap.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="__PUBLIC__/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="__PUBLIC__/adminlte/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="__PUBLIC__/adminlte/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="__PUBLIC__/adminlte/dist/js/demo.js"></script>
+<!-- page script -->
+<!-- 日期双向选择器 -->
+<script src="__PUBLIC__/adminlte/bower_components/picket_date/moment.js"></script>
+<script src="__PUBLIC__/adminlte/bower_components/picket_date/daterangepicker.js"></script>
+
+<!-- 图标 -->
+<script src="__PUBLIC__/adminlte/dist/js/echarts.common.min.js"></script>
+
+<script type="text/javascript">
+window.onload=function(){
+  sheet1();
+  sheet2();
+  sheet3();
+};
+
+  //图标
+  function sheet1(){
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('sheet1'));
+    var sheet1_x_data = ['2018/3/20','2018/3/21','2018/3/22','2018/3/23','2018/3/24','2018/3/25','2018/3/26'];
+    var sheet1_y_data = [964, 784, 312, 742, 999, 1022, 753];
+
+    // 指定图表的配置项和数据
+    option = {
+      // title: {
+      //     text: '折线图堆叠'
+      // },
+      tooltip: {
+          trigger: 'axis'
+      },
+      // legend: {
+      //     data:['用户增长趋势表']
+      // },
+      grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+      },
+      // toolbox: {
+      //     feature: {
+      //         saveAsImage: {}
+      //     }
+      // },
+      xAxis: {
+          type: 'category',
+          boundaryGap: false,
+          data: sheet1_x_data
+      },
+      yAxis: {
+          type: 'value',
+      },
+      series: [
+          {
+              name:'用户增长趋势(人)',
+              type:'line',
+              stack: '总量',
+              data: sheet1_y_data
+          }
+      ],
+      color:['#7FA0FF']   //底盘颜色
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+  };
+  //图标
+  function sheet2(){
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('sheet2'));
+    var sheet2_x_data = ['2018/3/20','2018/3/21','2018/3/22','2018/3/23','2018/3/24','2018/3/25','2018/3/26'];
+    var sheet2_y_data = [12000, 13208, 10188, 13498, 9088, 23098, 21120];
+
+    // 指定图表的配置项和数据
+    option = {
+      // title: {
+      //     text: '折线图堆叠'
+      // },
+      tooltip: {
+          trigger: 'axis'
+      },
+      // legend: {
+      //     data:['用户增长趋势表']
+      // },
+      grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+      },
+      // toolbox: {
+      //     feature: {
+      //         saveAsImage: {}
+      //     }
+      // },
+      xAxis: {
+          type: 'category',
+          boundaryGap: false,
+          data: sheet2_x_data
+      },
+      yAxis: {
+          type: 'value',
+      },
+      series: [
+          {
+              name:'参赛次数增长(人)',
+              type:'line',
+              stack: '总量',
+              data: sheet2_y_data
+          }
+      ],
+      color:['#C47FFF']   //底盘颜色
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+  };
+
+  function sheet3(){
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('sheet3'));
+    var sheet3_x_data = ['2018/3/20','2018/3/21','2018/3/22','2018/3/23','2018/3/24','2018/3/25','2018/3/26'];
+    var sheet3_y_data = [9991, 10220, 9996, 10766, 8900, 12004, 10222];
+
+    // 指定图表的配置项和数据
+    option = {
+      // title: {
+      //     text: '折线图堆叠'
+      // },
+      tooltip: {
+          trigger: 'axis'
+      },
+      // legend: {
+      //     data:['用户增长趋势表']
+      // },
+      grid: {
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
+      },
+      // toolbox: {
+      //     feature: {
+      //         saveAsImage: {}
+      //     }
+      // },
+      xAxis: {
+          type: 'category',
+          boundaryGap: false,
+          data: sheet3_x_data
+      },
+      yAxis: {
+          type: 'value',
+      },
+      series: [
+          {
+              name:'复活卡总收入增长(元)',
+              type:'line',
+              stack: '总量',
+              data: sheet3_y_data
+          }
+      ],
+      color:['#FFA886'],
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+  };
+  // 时间选择器日期
+    $('.ranges_1 ul').remove();
+    // 时间选择器日期1
+    $('#daterange-btn1').daterangepicker({
+        ranges: {
+            '全部': [moment(), moment().subtract(-1, 'days')],
+            '今天': [moment(), moment()],
+            '明天': [moment().subtract(-1, 'days'), moment().subtract(-1, 'days')],
+            '未来七天': [moment(),moment().subtract(-6, 'days')],
+            '未来30天': [moment(),moment().subtract(-29, 'days')],
+            '未来60天': [moment(),moment().subtract(-59, 'days'), ]
+        },
+        startDate: moment(),
+        endDate: moment()
+      },
+      function(start, end,label) {
+          //label:通过它来知道用户选择的是什么，传给后台进行相应的展示
+          if(label=='全部'){
+              $('#daterange-btn1 span').html('全部');
+          }else if(label=='今天'){
+              $('#daterange-btn1 span').html(start.format('YYYY/MM/DD'));
+          }else if(label=='明天'){
+              $('#daterange-btn1 span').html(start.format('YYYY/MM/DD'));
+          }else if(label=='未来七天'){
+              $('#daterange-btn1 span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+          }else if(label=='未来30天'){
+              $('#daterange-btn1 span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+          }else if(label=='未来60天'){
+              $('#daterange-btn1 span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+          }
+
+      }
+    );
+
+    // 时间选择器日期2
+    $('#daterange-btn2').daterangepicker({
+        ranges: {
+            '全部': [moment(), moment().subtract(-1, 'days')],
+            '今天': [moment(), moment()],
+            '明天': [moment().subtract(-1, 'days'), moment().subtract(-1, 'days')],
+            '未来七天': [moment(),moment().subtract(-6, 'days')],
+            '未来30天': [moment(),moment().subtract(-29, 'days')],
+            '未来60天': [moment(),moment().subtract(-59, 'days'), ]
+        },
+        startDate: moment(),
+        endDate: moment()
+      },
+      function(start, end,label) {
+          //label:通过它来知道用户选择的是什么，传给后台进行相应的展示
+          if(label=='全部'){
+              $('#daterange-btn2 span').html('全部');
+          }else if(label=='今天'){
+              $('#daterange-btn2 span').html(start.format('YYYY/MM/DD'));
+          }else if(label=='明天'){
+              $('#daterange-btn2 span').html(start.format('YYYY/MM/DD'));
+          }else if(label=='未来七天'){
+              $('#daterange-btn2 span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+          }else if(label=='未来30天'){
+              $('#daterange-btn2 span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+          }else if(label=='未来60天'){
+              $('#daterange-btn2 span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+          }
+
+      }
+    );
+
+    // 时间选择器日期3
+    $('#daterange-btn3').daterangepicker({
+        ranges: {
+            '全部': [moment(), moment().subtract(-1, 'days')],
+            '今天': [moment(), moment()],
+            '明天': [moment().subtract(-1, 'days'), moment().subtract(-1, 'days')],
+            '未来七天': [moment(),moment().subtract(-6, 'days')],
+            '未来30天': [moment(),moment().subtract(-29, 'days')],
+            '未来60天': [moment(),moment().subtract(-59, 'days'), ]
+        },
+        startDate: moment(),
+        endDate: moment()
+    },
+    function(start, end,label) {
+        //label:通过它来知道用户选择的是什么，传给后台进行相应的展示
+        if(label=='全部'){
+            $('#daterange-btn3 span').html('全部');
+        }else if(label=='今天'){
+            $('#daterange-btn3 span').html(start.format('YYYY/MM/DD'));
+        }else if(label=='明天'){
+            $('#daterange-btn3 span').html(start.format('YYYY/MM/DD'));
+        }else if(label=='未来七天'){
+            $('#daterange-btn3 span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+        }else if(label=='未来30天'){
+            $('#daterange-btn3 span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+        }else if(label=='未来60天'){
+            $('#daterange-btn3 span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+        }
+
+    }
+  );
+</script>
+
+
+
+<!-- 时间选择器日期弹框 -->
+<div class="daterangepicker dropdown-menu opensright"><div class="ranges"><ul><li>全部</li><li>今天</li><li>明天</li><li>未来七天</li><li>未来30天</li><li>未来60天</li></ul></div><div class="ranges ranges_1"><ul><li>全部</li><li>今天</li><li>明天</li><li>未来七天</li><li>未来30天</li><li>未来60天</li></ul><div class="range_inputs"><button class="applyBtn btn btn-sm btn-success" disabled="disabled" type="button">确定</button> <button class="cancelBtn btn btn-sm btn-default" type="button">取消</button></div></div><div class="calendar left"><div class="prev_year"><i class="icon iconfont icon-shuangxian-zuojiantou"></i></div><div class="calendar-table"></div></div><div class="calendar right"><div class="prev_month"><i class="icon iconfont icon-shuangxian-youjiantou"></i></div><div class="calendar-table"></div></div><div class="calendar calendar_1"><div class="daterangepicker_input"><input class="input-mini" type="text" name="daterangepicker_start" value=""><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div></div><div class="calendar calendar_2"><div class="daterangepicker_input"><input class="input-mini" type="text" name="daterangepicker_end" value=""><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div></div><div class="line_date"></div><div class="line_date_2"></div><div class="all">全部日期</div></div>
+</body>
+</html>

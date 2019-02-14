@@ -1,0 +1,138 @@
+<include src="../../overdue/overdue.wxml"/>
+<view class='container'>
+  <image class='container_bg' src='/images/db/game/bg.png'  ></image>
+  <view class='top'>
+    <view class='top_content'>
+      <image class='avatar center-block' src='{{userInfo.avatarUrl}}'></image>
+       <view class='top_text center-block'>{{userInfo.nickName}}</view> 
+      <view class='awards center-block {{success ? "on": ""}}' >
+          <image class='{{success ? "on": ""}}' src='{{success ? "/images/db/game/success.png" : "/images/db/game/fail.png"}}'></image>
+      </view>
+      <view class='qaAnswer' wx:if='{{success}}'>
+        <!-- <block wx:for='{{qaAnswer}}' wx:key='*this'>
+          <image class='answer_item' src='{{item ? "/images/wd/game/yes.png" : "/images/wd/game/no.png"}}'></image>
+        </block> -->
+      </view>
+      <block wx:else>
+        <view class='fail-bq-bg'>
+          <image class='fail-bq' src='/images/db/game/fail-bq.png'></image>
+          <view class='tangyuan_text'>我想一个人静静</view>
+           <!-- <view class='tangyuan_text'>看来你的智商有待提升呢!</view>  -->
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='endText' wx:if='{{success}}'>
+    <view class='prize'>
+      <view class='text-center'>恭喜你获得一只<text>{{prize.text}}</text></view>
+      <image class='center-block' src='{{prize.src}}' mode='widthFix'></image>
+      <view class='btn' bindtap='tologistics'>{{status ? '立即兑换' : '已兑换'}}</view>
+    </view>
+    <!-- <view wx:if='{{state}}'>
+      <view class='sum text-center'><text class='s_text'><text class='text'>{{money}}</text> 元</text></view> 
+        <view class='text-center s_text2'>赏金会在1-3个工作日内存入你的微信零钱中</view>
+    </view>
+    <view class='text-center s_text' wx:else>
+      <view>{{stateText}}</view>
+      <view class='s_text3'>{{stateText2}}</view>
+    </view> -->
+  </view>
+  <block wx:else>
+    <view class='endText'>
+      <!-- <view class='text-center s_text'>答对了{{qaYes}}题呦, 下次再接再厉!</view> -->
+      <!-- <image class='center-block tangyuan' src='/images/wd/game/tangyuan.png'></image> -->
+    </view>
+  </block>
+  <view class='co_btn center-block'>
+    <view class='text-center s_text2' wx:if="{{flag5}}">分享到群获得更多挑战机会</view>
+    <view class='friend moreShare' wx:if="{{flag5}}"><button class='btn_share' open-type="share"> 获得更多挑战</button></view>
+    <view class='friend moreChallenge' bindtap='tolose'>再来一次</view>
+  </view>
+  <view class='lose center-block' bindtap='tolose'>
+    <image src='/images/wd/game/back.png' class='lose_icon'></image>
+    返回首页
+  </view>
+   <!-- 物流  -->
+  <view wx:if='{{logistics}}' class='logistics'>
+    <view class='text-center'>本次兑换奖品</view>
+    <view class='rgba_border'>
+      <view class='form form1'>
+        <image src="{{toprize.prize_img}}"></image>
+        <view class='exchaneg_prize_name'>{{toprize.prize_name}}</view>
+      </view>
+    </view>
+    <view class='text-center'>请填写您的兑换信息</view>
+    <view class='rgba_border'>
+      <view class='form'>
+        <form bindsubmit='submit'>
+          <view class='line-block'>
+            <view class='label'>姓名</view>
+            <input type='text' name='name' placeholder='请输入您的姓名' placeholder-style='color: #999;'></input>
+          </view>
+          <view class='line-block'>
+            <view class='label'>联系电话</view>
+            <input type="number" maxlength="11" name='phone' placeholder='请输入您的联系电话' placeholder-style='color: #999;'></input>
+          </view>
+          <view class='line-block'>
+            <view class='label'>收件地址</view>
+            <input type='text' name='address' placeholder='请输入您的详细地址' placeholder-style='color: #999;'></input>
+          </view>
+          <view class='tip'>提示: 提交前请确保您的兑换信息是否是有效信息, 否则奖品将无法寄出</view>
+          <view class='btn_bg'>
+            <button class='submit' formType="submit"></button>
+            <image src='/images/db/prize/tj_btn.png'></image>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view>
+  <!-- 判断挑战次数  -->
+  <view wx:if='{{frequencyModel}}' class='frequency_box'>
+    <view class='frequency_content'>
+      <view class='frequency_title'>提示</view>
+      <view class='frequency_text'>分享到群聊可以获得更多挑战机会, 赶快来点击分享吧 ! !</view>
+      <view catchtap='closeFrequencyModel' class='frequency_false'><image src='/images/wz/index/ru_false.png'></image></view>
+    </view>
+    <view class='ru_shadow'></view>
+  </view>
+  <!-- 开启红包  -->
+  <view wx:if='{{show}}' class='rule_box'>
+    <view class='ru_box'>
+      <image class='ru_bg {{open ? "on" : ""}}' src='{{open ? "/images/wz/complete/close.png" : "/images/wz/complete/open.png" }}'></image>
+      <view class='ru_content' wx:if='{{open}}'>
+        <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+        <view class='ru_text name'>{{userInfo.nickName}}</view>
+        <view class='ru_text'>恭喜你完成了挑战, 获得赏金一份</view>
+        <view class='open_btn' bindtap='toOpen'>
+          <image src='/images/wz/complete/open_btn.png'></image>
+        </view>
+      </view>
+      <block wx:else>
+        <view class='ru_content'>
+          <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+          <view class='ru_text name'>{{userInfo.nickName}}</view>
+          <view class='ru_text'>恭喜你完成了挑战, 获得赏金一份</view>
+          <view class='ru_money'>
+            <text class='ru_text2'>{{money}}</text>元
+          </view>
+          <view class='mark'>赏金已存入微信零钱</view>
+        </view>
+      </block>
+      <image wx:if='{{!open}}' class='close_btn' src='/images/wz/complete/close_btn.png' bindtap='toClose'></image>
+    </view>
+    <view class='ru_shadow'></view>
+  </view>
+
+  <!-- 提交成功 -->
+  <view wx:if='{{okexchange}}'>
+    <view class='dark_bg'>
+      <view class='lingth_bg'>
+        <image src='/images/db/prize/tjcg_ico.png'></image>
+        <view class='tit'>提交成功,等待审核...</view>
+        <!-- <view class='content'>提示:信息审核需要1-3个工作日,如需查询奖品处理状态,请联系在线客服或添加<text >＂{{app_name}}＂</text>微信公众号查询</view> -->
+        <view class='content'>提示:信息审核需要1-3个工作日,如需查询奖品处理状态,请联系在线客服查询</view>
+        <view class='ok_btn' bindtap='back'>确定</view>
+      </view>
+    </view>
+  </view>
+</view> 

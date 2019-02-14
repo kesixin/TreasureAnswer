@@ -1,0 +1,423 @@
+/* pages/prizeList/prizelist.wxss */
+.container{
+  position: relative;
+  background: #7fa0ff; 
+  height: 100%;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #333;
+}
+.container_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  z-index: 0;
+}
+.pl-nav{
+  width: 100%;
+  height: 120rpx;
+  background: #7fa0ff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.nav-btn {
+  width: 640rpx;
+  margin: 20rpx auto;
+  display: flex;
+}
+.nav-btn view{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: #fff;
+  color: #6482da;
+  font-size: 32rpx;
+}
+.nav-btn .nav1{
+  border-radius: 40rpx 0 0 40rpx;
+}
+.nav-btn .nav2{
+  border-radius: 0 40rpx 40rpx 0;
+}
+.nav-btn .on{ 
+  background: #6482da;
+  color: #fff;
+}
+.swiper {
+  height: 100%;
+}
+.swiper .ls{
+  padding: 0 55rpx;
+  font-size: 28rpx;
+  color: #333;
+  height: 100%;
+}
+.clear-top{
+  width: 640rpx;
+  height: 150rpx;
+}
+
+.prize_box {
+   position: relative; 
+  float: left;
+  overflow: hidden;
+  width: 640rpx;
+  height: 380rpx;
+  margin-bottom: 20rpx;
+}
+.prize_box image {
+  width: 100%;
+}
+.prize_text {
+  position: absolute;
+  bottom: 25rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn_r0{
+  margin: 0;
+  float: right;
+}
+
+.package {
+  position: relative;
+  margin: 0 0 20rpx;
+  height: 150rpx;
+  width: 640rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.pa_box {
+  margin-left: 30rpx;
+  padding-top: 30rpx;
+  font-size: 24rpx;
+  width: 610rpx;
+  color: #666;
+}
+.pa_box image {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.pa_name {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+.money {
+  margin-right: 30rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+}
+.pa_text {
+  margin-left: 30rpx;
+  line-height: 1.6em;
+}
+.package .fr {
+  margin-right: 30rpx;
+}
+.fr .text-right {
+  letter-spacing: 0.08em;
+}
+.fr .prizeName {
+  padding-bottom: 15rpx;
+  overflow: hidden;
+}
+.fr .prizeName text{
+  color: #ff8167;
+}
+.btn {
+  display: inline-block;
+  padding: 8rpx 25rpx;
+  text-align: center;
+  background: #ff8167;
+  color: #fff;
+  border-radius: 30rpx;
+}
+
+
+.rule_box {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 750rpx;
+  height: 100%;
+  animation: opacity .5s; 
+  z-index: 1001
+}
+.add_box {
+  opacity: 0;
+}
+ .rule_box.on {
+  opacity: 1;
+} 
+.ru_shadow {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  z-index: 101;
+}
+.ru_content {
+  position: relative;
+  width: 680rpx;
+  padding-bottom: 50rpx;
+  margin: 310rpx auto 0;
+  background: #fff;
+  border-radius: 10rpx;
+  z-index: 999;
+}
+.ru_title {
+  margin-bottom: 50rpx;
+  padding-top: 60rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+.ru_false {
+  position: absolute;
+  top: 30rpx;
+  right: 40rpx;
+}
+.ru_false image {
+  width: 28rpx;
+  height: 28rpx;
+}
+.prizeMore {
+  margin: 0 30rpx;
+  border-bottom: 2rpx dashed #999;
+}
+.p_con {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  margin-bottom: 40rpx;
+}
+.p_con .fl image {
+  width: 60rpx;
+  vertical-align: middle;
+  margin-top: -10rpx;
+  margin-right: 10rpx;
+}
+.p_con .fr {
+  padding: 0 50rpx;
+  border-radius: 10rpx;
+  background: #ff7373;
+  color: #fff;
+}
+.exchange_bottom {
+  margin: 10rpx 30rpx;
+  font-size: 24rpx;
+  line-height: 1.5em;
+  color: #999;
+}
+.logistics {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #7fa0ff;
+  color: #fff;
+  font-size: 28rpx;
+  z-index: 1001;
+}
+.logistics .text-center {
+  margin: 20rpx 0;
+}
+.rgba_border{
+  background: rgba(255,255,255,.8);
+  width: 92%;
+  border-radius: 10rpx;
+  text-align:center;
+  margin:0 auto;
+  padding: 10rpx;
+
+}
+.form {
+  width: 99%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10rpx;
+  padding:20px 2%;
+}
+.form1{
+  padding: 10rpx;
+}
+.label {
+  line-height: 2.6em;
+  /* display: inline-block; */
+  float: left;
+  width: 27%;
+  margin: 0 1%;
+  height: 68rpx;
+  background: #FFCAB2;
+  color: #917263;
+  border-radius: 50rpx;
+  border:1rpx solid #917263;
+  text-align: center;
+}
+.form input {
+  background: #fff;
+  width: 420rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-indent: 20rpx;
+  color: #333;
+  float: right;
+  text-align: left;
+  border-bottom: 1rpx solid #eee;
+  margin-right: 20rpx;
+}
+.form .line-block{
+  overflow: hidden;
+  margin: 32rpx 0;
+}
+.form>image{
+  width: 640rpx;
+  height: 300rpx;
+}
+.form .exchaneg_prize_name{
+  font-size: 32rpx;
+  color: #333;
+  line-height: 60rpx;
+}
+.tip {
+  margin: 30rpx 0;
+  font-size: 24rpx;
+  letter-spacing: 0.08em;
+  color: #999;
+  text-align: left;
+}
+.submit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #ff7373;
+  color: #fff;
+  opacity: 0
+}
+.btn_bg{
+  position: relative;
+  overflow: hidden;
+}
+.btn_bgbutton{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.btn_bg>image{
+  width: 588rpx;
+  height: 88rpx;
+  opacity: 1;
+}
+
+.non-data-bg{
+  width: 640rpx;
+  text-align: center;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+.non-data-bg image{
+  width: 100px;
+  height: 100px;
+  margin: 40rpx 0 20rpx;
+}
+.non-data-bg>view{
+  font-size: 30rpx;
+  line-height: 48rpx;
+}
+.non-data-bg>view.toindex-btn{
+  color: #fff;
+  width: 80%;
+  background: #4EC454;
+  border-radius: 50rpx;
+  padding: 20rpx 0;
+  margin: 30px auto 70rpx;
+}
+
+/* 提交成功弹框 */
+.dark_bg{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.lingth_bg{
+  width: 80%;
+  height:auto;
+  margin:42% auto 0;
+  background: #fff;
+  text-align: center;
+  border-radius: 10rpx;
+  position: relative;
+  overflow: hidden;
+}
+.lingth_bg image{
+  width: 130rpx;
+  height: 130rpx;
+  margin: 40rpx 0;
+}
+.lingth_bg .tit{
+  color: #57C774;
+  font-size:36rpx;
+}
+/* .lingth_bg .tit{
+  font-weight: 300;
+} */
+.lingth_bg .content{
+  color: #666;
+  font-size: 24rpx;
+  padding: 30rpx 40rpx;
+  text-align: left;
+}
+.lingth_bg .content>text{
+  font-size: 30rpx;
+  font-weight: 700rpx;
+  color: #333;
+}
+.lingth_bg .ok_btn{
+  background: #57C774;
+  color: #fff;
+  width: 87%;
+  height: 100rpx;
+  line-height: 102rpx;
+  text-align: center;
+  margin: 30rpx auto 60rpx;
+  border-radius:20rpx;
+  /* border-radius:50rpx; */
+}
+
+/* 客服 */
+.kf {
+  position: absolute;
+  top:20%;
+  right:0;
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 54rpx;
+  padding: 8rpx 15rpx 8rpx 20rpx;
+  background: #4ec454;
+  color: #fff;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  margin-top: 30rpx;
+  z-index: 3;
+}
+.kf image {
+  width: 28rpx;
+  vertical-align: middle;
+  margin-top: -5rpx;
+}

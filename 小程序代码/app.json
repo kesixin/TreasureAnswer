@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/report/report",
+    "pages/index/index",
+    "overdue/overdue",
+    "pages/group/group",
+    "pages/prizeList/prizelist",
+    "pages/complete/complete",
+    "pages/userCenter/userCenter",
+    "pages/ranking/ranking",
+    "pages/game/game",
+    "pages/certificate/certificate",
+    "pages/help/help"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#7fa0ff",
+    "navigationBarTitleText": "状元之路之亲子文学",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 8000
+  }
+}

@@ -1,0 +1,168 @@
+<admintpl file="header" />
+<style type="text/css">
+
+    .nav-tabs>li>a {
+        color: #95a5a6;
+    }
+    .nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus {
+        color: #39f;
+        background-color: transparent;
+        border: none;
+    }
+    .btn-primary {
+        background: #66CCFF;
+    }
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+        background-color: #4d94b7;
+    }
+    .form-actions {
+        background-color: transparent;
+    }
+    .btn-danger {
+        background: #FF708D;
+
+    }
+    .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
+        background: #d25a72;
+    }
+    .pagination>a {
+      color: #39f;
+    }
+    .table-bordered {
+        border-collapse: collapse;
+    }
+    .table-bordered tr>th {
+        color: #39f;
+    }
+</style>
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('Quests/index')}">题库列表</a></li>
+			<li class=""><a href="{:U('Quests/import')}">题库导入</a></li>
+		</ul>
+        <form class="well form-search" method="post" action="{:U('Quests/index')}">
+           <!--  请输入OpenId:
+            <input type="text" name="openid" style="width: 100px;" value="{:I('request.openid/s','')}" placeholder="请输入OpenId"> -->
+			关键字:
+            <input type="text" name="keywork" style="width: 200px;" value="{:I('request.keywork/s','')}" placeholder="题目/答案">
+            <input type="submit" class="btn btn-primary" value="搜索" />
+            <a class="btn btn-danger" href="{:U('Quests/index')}">清空</a>
+        </form>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>提供者</th>
+					<th>问题</th>
+					<th>答案题组</th>
+					<th>答案序号</th>
+					<th>学科</th>
+					<th>分类</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="quests" item="vo">
+				<tr>
+					<td class="questId">{$vo.id}</td>
+					<td>{$vo.contributor}</td>
+					<td>{$vo.quiz}</td>
+					<td>{$vo.options}</td>
+					<td>{$vo.answer}</td>
+					<td>{$vo.school}</td>
+					<td>{$vo.type}</td>
+					<td>
+					<button class="remove-from-enve btn btn-sm btn-default btn-danger">删除</button>
+					
+
+					</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+		<div class="pagination">{$page}</div>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script>
+		$('.img-show').on('click',function(){
+		   var img_src = $(this).attr('attr-img');
+		   console.log(img_src);
+            //页面层-自定义
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 0,
+                shadeClose: true,
+                skin: 'yourclass',
+                content: '<img src="'+img_src+'"/>'
+            });
+		})
+
+		$('.video-show').on('click',function(){
+		   var video_src = $(this).attr('attr-video');
+		   //console.log(img_src);
+            //页面层-自定义
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 0,
+                shadeClose: true,
+                offset: 't',
+                skin: 'yourclass',
+                content: '<video src="'+video_src+'" controls="controls" />'
+            });
+		})
+
+		$('.remove-from-enve').on('click', function() {
+			var ele = $(this);
+		    var enveid = ele.parents('tr').find('.questId').text();
+		    var p_left = ele.position().left - 300;
+		    var p_top = ele.position().top - 50;
+		    
+		  //添加成功
+			Wind.use("artDialog", function() {
+				art.dialog({
+					id : "succeed",
+					icon : "succeed",
+					left: p_left,
+					top:	p_top,
+					fixed : true,
+					lock : true,
+					background : "#CCCCCC",
+					opacity : 0,
+					content : '确定删除ID为'+enveid+'的记录吗',
+					button : [ {
+						name : "{:L('OK')}",
+						callback : function() {
+							$.post("{:U('Quests/removeQuest')}", {'id':enveid}, function (data) {
+								//alert($data.msg);
+								if(data.error_no == 0){
+									//location.reload();
+									reloadPage(window);
+								}else{
+									alert(data.msg);
+								}
+								
+							});
+							
+							return true;
+						},
+						focus : true
+					}, {
+						name : "{:L('CLOSE')}",
+						callback : function() {
+							//reloadPage(window);
+							return true;
+						}
+					} ]
+				});
+			});
+		  
+			
+		})
+
+	</script>
+</body>
+</html>

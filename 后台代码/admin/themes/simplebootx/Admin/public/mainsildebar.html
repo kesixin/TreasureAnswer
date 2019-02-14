@@ -1,0 +1,93 @@
+<!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- <li class="header">主导航</li> -->
+        <!-- 多个菜单 -->
+        <li class="treeview <eq name="Think.CONTROLLER_NAME" value="Statis">menu-open</eq>">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i> <span>统计分析</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu " <eq name="Think.CONTROLLER_NAME" value="Statis">style="display: block;"</eq>>
+            <li><a class="<eq name="Think.CONTROLLER_NAME" value="Statis"><eq name="Think.ACTION_NAME" value="index">active</eq></eq>" href="{:U('Statis/index')}">概况统计</a></li>
+            <li><a class="<eq name="Think.CONTROLLER_NAME" value="Statis"><eq name="Think.ACTION_NAME" value="statsReply">active</eq></eq>" href="{:U('Statis/statsReply')}">答对率统计</a></li>
+          </ul>
+        </li>
+         <li class="<eq name="Think.CONTROLLER_NAME" value="Gsetting"><eq name="Think.ACTION_NAME" value="Gsetting">on</eq></eq>">
+          <a  href="{:U('Gsetting/Gsetting')}">
+            <i class="fa fa-gamepad"></i> <span>游戏设置</span>
+          </a>
+        </li>
+        <!-- /单个菜单 -->
+        <li class="treeview <eq name="Think.CONTROLLER_NAME" value="TK">menu-open</eq>">
+          <a href="#">
+            <i class="fa fa-list-alt"></i> <span>题库管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu " <eq name="Think.CONTROLLER_NAME" value="TK">style="display: block;"</eq>>
+            <li><a class="<eq name="Think.CONTROLLER_NAME" value="TK"><eq name="Think.ACTION_NAME" value="TKdisplay">active</eq></eq>" href="{:U('TK/TKdisplay')}">题库展示</a></li>
+            <li><a class="<eq name="Think.CONTROLLER_NAME" value="TK"><eq name="Think.ACTION_NAME" value="typeIndex">active</eq></eq>" href="{:U('TK/typeIndex')}">题库设置</a></li>
+            <li><a class="<eq name="Think.CONTROLLER_NAME" value="TK"><eq name="Think.ACTION_NAME" value="TKinto">active</eq></eq>" href="{:U('TK/TKinto')}">题库导入</a></li>
+          </ul>
+        </li>
+        <li class="<eq name="Think.CONTROLLER_NAME" value="UserAdmin"><eq name="Think.ACTION_NAME" value="userAdmin">on</eq></eq>">
+          <a  href="{:U('userAdmin/userAdmin')}">
+            <i class="fa fa-user-circle"></i> <span>用户管理</span>
+          </a>
+        </li>
+        <li class="treeview <eq name="Think.CONTROLLER_NAME" value="Psetting">menu-open</eq>">
+          <a href="#">
+            <i class="fa fa-address-book-o"></i> <span>中奖管理</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" <eq name="Think.CONTROLLER_NAME" value="Psetting">style="display: block;"</eq>>
+            <li><a class="<eq name="Think.CONTROLLER_NAME" value="Psetting"><eq name="Think.ACTION_NAME" value="Psetting">active</eq></eq>" href="{:U('Psetting/Psetting')}">奖品设置</a></li>
+            <li><a class="<eq name="Think.CONTROLLER_NAME" value="Psetting"><eq name="Think.ACTION_NAME" value="Pdetail">active</eq></eq>" href="{:U('Psetting/Pdetail')}">中奖明细</a></li>
+            <li><a class="<eq name="Think.CONTROLLER_NAME" value="Psetting"><eq name="Think.ACTION_NAME" value="Plogic">active</eq></eq>" href="{:U('Psetting/Plogic')}">物流管理</a></li>
+          </ul>
+        </li>
+
+        <li class="<eq name="Think.CONTROLLER_NAME" value="Paydetail"><eq name="Think.ACTION_NAME" value="Paydetail">on</eq></eq>">
+          <a  href="{:U('Paydetail/Paydetail')}">
+            <i class="fa fa-credit-card"></i> <span>支付明细</span>
+          </a>
+        </li>
+
+        <li class="<eq name="Think.CONTROLLER_NAME" value="TGsetting"><eq name="Think.ACTION_NAME" value="TGsetting">on</eq></eq>">
+          <a  href="{:U('TGsetting/TGsetting')}">
+            <i class="fa fa-bullhorn"></i> <span>推广设置</span>
+          </a>
+        </li>
+
+        <li class="<eq name="Think.CONTROLLER_NAME" value="Appsetting"><eq name="Think.ACTION_NAME" value="APPsetting">on</eq></eq>">
+          <a  href="{:U('Appsetting/APPsetting')}">
+            <i class="fa fa-link"></i> <span>小程序设置</span>
+          </a>
+        </li>
+
+        <li class="treeview <eq name="Think.CONTROLLER_NAME" value="JBsetting">menu-open</eq>">
+          <a href="#">
+            <i class="fa fa-cog"></i> <span>基本设置</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" <eq name="Think.CONTROLLER_NAME" value="JBsetting">style="display: block;"</eq>>
+            <li><a class="<eq name="Think.CONTROLLER_NAME" value="JBsetting"><eq name="Think.ACTION_NAME" value="Paysetting">active</eq></eq>" href="{:U('JBsetting/Paysetting')}">支付设置</a></li>
+            <li><a class="<eq name="Think.CONTROLLER_NAME" value="JBsetting"><eq name="Think.ACTION_NAME" value="Custsetting">active</eq></eq>" href="{:U('JBsetting/Custsetting')}">客服自动回复设置</a></li>
+            <li><a class="<eq name="Think.CONTROLLER_NAME" value="JBsetting"><eq name="Think.ACTION_NAME" value="Changepwd">active</eq></eq>" href="{:U('JBsetting/Changepwd')}">修改密码</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="zhy_logo"><img src="__PUBLIC__/adminlte/dist/img/zhy_login_ico.png"></div>
+    </section>
+    <!-- /.sidebar -->
+  </aside>

@@ -1,0 +1,48 @@
+<include src="../../overdue/overdue.wxml"/>
+<view class="container">
+  <!-- <image src='{{thisImg ? thisImg : "/images/db/index/bg.png"}}' class='container_bg' mode='widthFix'></image> -->
+    <view class='top'>
+      <image src='/images/db/index/top.png' mode='widthFix'></image>
+       <text class='top_text2'>{{right}}</text> 
+      <text class='top_text'>当前共有<text class='text_red'>{{total}}</text>次参赛</text>
+    </view>
+    <view class='rank_box'>
+      <view class='text-center'>-本群排行-</view>
+      <scroll-view class='ls group_ls' scroll-y="true" bindscrolltolower="lower" scroll-with-animation="true">
+          <block wx:for="{{list}}"  wx:for-item="itemChild" wx:for-index="idx">
+            <view class='ls_bg'>
+              <view class='ls-item'>
+                <view class='ls-l ls-l{{idx+1}}'>
+                  <view wx:if="{{idx<=2}}" class='img_'>
+                    <image wx:if="{{idx==0}}" src='/images/wd/ranking/rank-01.png'></image>
+                    <image wx:if="{{idx==1}}" src='/images/wd/ranking/rank-02.png'></image>
+                    <image wx:if="{{idx==2}}" src='/images/wd/ranking/rank-03.png'></image>
+                  </view>
+                  <text wx:if="{{idx>2}}">{{idx+1}}</text>
+                </view>
+                <view class='ls-c'>
+                  <view class='ls-c-img'>
+                    <image src="{{itemChild.head_img}}"></image>
+                  </view>
+                  <view class='ls-c-txt'>
+                    <view class='fl'>
+                      <view class='ls-c-t'>{{itemChild.nick_name}}</view>
+                      <!-- <view class='ls-c-b'>挑战<text>{{itemChild.sendnum}}</text>次，成功{{itemChild.passnum}}次</view> -->
+                    </view>
+                    <view class='ls-c-fr fr'>
+                      <!-- <view class='ls-c-t'>{{itemChild.point}}分</view> -->
+                      <view class='ls-c-b'>获得<text>{{itemChild.prize_amount || 0}}</text>个娃娃</view> 
+                    </view>
+                  </view>
+                </view>
+              </view>  
+            </view>
+          </block>
+          <view style='height: 200rpx'></view>
+        </scroll-view>
+    </view>
+    <view class="footer">
+      <view><image src='/images/db/rank/pk.png' bindtap='topk'></image><button open-type="share"></button></view>
+      <view><image src='/images/db/rank/toindex.png' bindtap='toindex'></image></view>
+    </view>
+</view> 

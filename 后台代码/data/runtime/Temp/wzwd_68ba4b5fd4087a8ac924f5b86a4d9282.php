@@ -1,0 +1,3 @@
+<?php
+//000002592000a:13:{s:9:"user_name";s:45:""\u98de\u83b1\u79d1\u6280-\u6797\u8363\u7130"";s:9:"nick_name";s:45:""\u98de\u83b1\u79d1\u6280-\u6797\u8363\u7130"";s:8:"head_img";s:122:"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoeDulMjjJdE6A01ghoiaFPyzfHOQAqjT748V4Fktl30xOhfeNIrPy1y9adxEFfydn5Ks0yD7yt3Fg/0";s:3:"sex";s:1:"1";s:6:"coutry";s:5:"Egypt";s:4:"city";s:0:"";s:8:"province";s:0:"";s:6:"openid";s:28:"oorUn41EU1T2vEB95hGoEwHFUou4";s:7:"unionid";s:0:"";s:11:"session_key";s:24:"h81UXLFHD8sQqP5wkJpDHw==";s:11:"update_time";i:1524493356;s:6:"u_name";s:22:"飞莱科技-林荣焰";s:7:"user_id";s:2:"12";}
+?>

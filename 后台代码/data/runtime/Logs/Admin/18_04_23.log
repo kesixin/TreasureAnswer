@@ -1,0 +1,1177 @@
+[ 2018-04-23T20:43:36+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/saveSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000288s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000264s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='customer_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='customer_options',`option_value`='{\"site_name\":\"\\u738b\\u8005\\u95ee\\u7b54\",\"site_icp\":\"\",\"site_tongji\":\"\",\"site_copyright\":\"\\u7248\\u6743\\u6240\\u6709\\u00a9\\u738b\\u8005\\u95ee\\u7b54\",\"C_APPID\":\"wx62f472ac6a55888d\",\"C_APPSECRET\":\"57e9e1a2b5f71148d4180fdd7136151a\",\"new_tpl\":\"news_tpl_send:gWyjhbm8-4iOH6S0ZrIrSuxqfGsyZRh2WFl6a6M6uFE,\\nnews_tpl_finish:kqOLyflg6p6pRQDQRUfSjYoVO-s5iE8Qdz4d1ckCtRQ,\\nnews_tpl_refund:_zTKmrmxVXs6T7GIXPNzuhhbV6Og9YkioAitBYc634s,\\nsubscribe_tpl_send:BYcpHGVQ1vJRK9Aajg7WkGBLG7zgLGstUzlRk7QbmJM\",\"G_MCHID\":\"1489667292\",\"G_KEY\":\"zhi138hui168yun188e8esc92jk2ld9c\",\"commision\":\"0\",\"advcommision\":\"0\",\"amount_min\":\"0.01\",\"hbadv_min\":\"0\",\"receive_amount_min\":\"0.01\",\"pt_nick_name\":\"\\u738b\\u8005\\u95ee\\u7b54\",\"pt_challenge_txt\":\"60\\u79d2\\u7b54\\u9898\\u8d62\\u5927\\u5956 ,\\u7b49\\u4f60\\u6765\\u6311\\u6218!\",\"audit\":\"0\",\"min_withdrawals\":\"1\",\"max_withdrawal_time\":\"3\",\"title\":\"\\u5173\\u6ce8\\u6211\\u4e00\\u4e0b\\u4e0b\\u5427\",\"description\":\"\\u6bcf\\u671f\\u653b\\u7565\\u6301\\u7eed\\u66f4\\u65b0\\uff0c\\u5a03\\u5a03\\u62ff\\u5230\\u624b\\u8f6f\",\"url\":\"http:\\/\\/www.baidu.com\",\"imgurl\":\"\\/envelop_tzdt\\/data\\/upload\\/\\/envelop_wzwdzh\\/data\\/upload\\/\\/envelop_wzwd\\/data\\/upload\\/\\/envelop_wzwc\\/data\\/upload\\/\\/envelop_wz\\/data\\/upload\\/admin\\/20180215\\/5a8598bf306f1.jpg\",\"hb_amount_min\":\"\",\"hb_amount_max\":\"\",\"moreGameFlag\":\"0\",\"gameruletxt\":\"\\u603b\\u5206\\u8fbe\\u5230{jige}\\u5206\\u4ee5\\u4e0a\\u5373\\u53ef\\u6311\\u6218\\u6210\\u529f\",\"gamerule\":\"\\u6bcf\\u4eba\\u53ef\\u514d\\u8d39\\u83b7\\u5f9710\\u6b21\\u6311\\u6218\\u673a\\u4f1a\\uff0c\\u5c06\\u5c0f\\u7a0b\\u5e8f\\u5206\\u4eab\\u5230\\u4e0d\\u540c\\u5fae\\u4fe1\\u7fa4\\u53ef\\u83b7\\u5f97\\u514d\\u8d39\\u6311\\u6218\\u673a\\u4f1a\\uff1b\\u6bcf\\u6b21\\u6311\\u6218\\u7b54\\u9898\\u6570\\u4e3a6\\u9898\\uff0c\\u5168\\u90e8\\u7b54\\u5bf9\\u5373\\u53ef\\u83b7\\u5f97\\u8d4f\\u91d1\\u3002\",\"gamefuli\":\"\\u7b54\\u5bf9\\u6240\\u6709\\u9898\\u76ee\\u53ef\\u968f\\u673a\\u83b7\\u5f971-5\\u5143\\u4e0d\\u7b49\\u7684\\u73b0\\u91d1\\u5956\\u52b1\\uff0c\\u6d3b\\u52a8\\u6bcf\\u671f\\u66f4\\u65b0\\uff01\",\"Gamount\":\"12\",\"giveAmount\":\"1\",\"giftAmount\":\"3\",\"resAmount\":\"3\",\"resCarAmount\":\"3\",\"resCarJE\":\"1\",\"excAmount\":\"3\",\"rule\":\"\\u6bcf\\u4eba\\u6bcf\\u5929\\u67093\\u6b21\\u7b54\\u9898\\u673a\\u4f1a\\u3002\\r\\n\\u6bcf\\u6b21\\u6311\\u6218\\u5305\\u542b12\\u9053\\u9898\\u76ee\\uff0c\\u5168\\u90e8\\u7b54\\u5bf9\\u5373\\u53ef\\u83b7\\u5f97\\u968f\\u673a\\u5a03\\u5a03\\u5956\\u54c1\\u3002\\r\\n\",\"explain\":\"\\u4e00\\u53e3\\u6c14\\u7b54\\u5bf912\\u9898\\u5373\\u53ef\\u9886\\u53d6\\u5a03\\u5a03\\u5956\\u54c1\\r\\n\",\"app_name\":\"\\u4e00\\u8d77\\u7b54\\u9898\\u593a\\u5b9d\",\"app_id\":\"wx9eb50917b51e25d2\",\"app_secret\":\"88cb3402806449af9419eb8d089ee4e4\",\"mchid\":\"1502634491\",\"key\":\"1WTrQYU2S4vtbRuT5763GdchYHAxNekj\",\"thumb_url\":\"admin\\/20180418\\/5ad7160020fb0.png\"}' WHERE ( option_name='customer_options' ) [ RunTime:0.0017s ]
+
+[ 2018-04-23T20:43:43+08:00 ] 113.65.28.155 /index.php/Admin/TK/questList?sEcho=1&iColumns=5&sColumns=%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=15&mDataProp_0=id&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=contributor&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=quiz&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=school&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=type&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&_=1524487415255
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000301s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000263s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `hb_questions` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hb_quest_type` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hb_questions` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT `id`,`contributor`,`quiz`,`school`,`type` FROM `hb_questions` WHERE `del` = 0 ORDER BY id DESC LIMIT 0,15   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2018-04-23T20:43:44+08:00 ] 113.65.28.155 /index.php/Admin/TK/typeList?sEcho=1&iColumns=5&sColumns=%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=15&mDataProp_0=id&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=quest_type_name&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=remark&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=false&mDataProp_3=create_time&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=false&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&_=1524487416486
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000279s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000270s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `hb_questions` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `hb_quest_type` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hb_quest_type` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `id`,`quest_type_name`,`remark`,FROM_UNIXTIME(`create_time`,"%Y-%m-%d %H:%i:%S") as create_time FROM `hb_quest_type` WHERE `del` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000335s ]
+
+[ 2018-04-23T20:43:47+08:00 ] 113.65.28.155 /index.php/Admin/UserAdmin/wxUserList?sEcho=1&iColumns=8&sColumns=%2C%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=10&mDataProp_0=id&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=head_img&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=ctimes&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=true&mDataProp_3=prize_amount&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=zm_points&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=add_time&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=update_time&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&mDataProp_7=&sSearch_7=&bRegex_7=false&bSearchable_7=true&bSortable_7=false&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=desc&iSortingCols=1&_=1524487419797
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000330s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000301s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `hb_wx_user` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `hb_role` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hb_wx_user` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT (select count(id) from hb_challenge where openid=u.openid ) as ctimes,(select count(id) from hb_challenge where openid=u.openid and prize_id>0 ) as prize_amount,`id`,`nick_name`,`head_img`,FROM_UNIXTIME(`add_time`,"%Y-%m-%d %H:%i:%S") as add_time,FROM_UNIXTIME(`update_time`,"%Y-%m-%d %H:%i:%S") as update_time,`zm_points`,`status` FROM hb_wx_user u ORDER BY id desc LIMIT 0,10   [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000356s ]
+
+[ 2018-04-23T20:43:49+08:00 ] 113.65.28.155 /index.php/Admin/Paydetail/payLogList?sEcho=1&iColumns=7&sColumns=%2C%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=10&mDataProp_0=id&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=nick_name&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=total_fee&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=false&mDataProp_3=transaction_id&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=add_time&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=status&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&mDataProp_6=&sSearch_6=&bRegex_6=false&bSearchable_6=true&bSortable_6=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&_=1524487422104
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000417s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000433s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_pay_log` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: where /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/PaydetailController.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `hb_pay_log` LIMIT 1   [ RunTime:0.0015s ]
+NOTIC: [8] Undefined variable: where /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/PaydetailController.class.php 第 52 行.
+SQL: SELECT a.id,b.nick_name,a.total_fee,FROM_UNIXTIME(a.`add_time`,"%Y-%m-%d %H:%i:%S") as add_time,a.transaction_id,if(a.status=0,"成功","失败") as status FROM hb_pay_log a LEFT JOIN hb_wx_user b ON a.openid = b.openid  ORDER BY add_time DESC LIMIT 0,10   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000380s ]
+
+[ 2018-04-23T20:43:54+08:00 ] 113.65.28.155 /index.php/Admin/TGsetting/appList?sEcho=1&iColumns=6&sColumns=%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=3&mDataProp_0=id&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=app_name&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=logo&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=false&mDataProp_3=app_desc&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=app_desc1&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&_=1524487426913
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000270s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000847s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000306s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `hb_applist` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hb_applist` LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `id`,`logo`,`app_name`,`app_desc`,`app_desc1`,`app_id`,FROM_UNIXTIME(`create_time`,"%Y-%m-%d %H:%i:%S") as create_time FROM `hb_applist` ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000312s ]
+
+[ 2018-04-23T20:43:57+08:00 ] 113.65.28.155 /index.php/Admin/TGsetting/appList?sEcho=1&iColumns=6&sColumns=%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=3&mDataProp_0=id&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=app_name&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=logo&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=false&mDataProp_3=app_desc&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=app_desc1&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&_=1524487430069
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000267s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000816s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000313s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `hb_applist` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hb_applist` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`logo`,`app_name`,`app_desc`,`app_desc1`,`app_id`,FROM_UNIXTIME(`create_time`,"%Y-%m-%d %H:%i:%S") as create_time FROM `hb_applist` ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000326s ]
+
+[ 2018-04-23T20:45:07+08:00 ] 113.65.28.155 /index.php/Admin/TGsetting/addOrEditInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000389s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001224s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000311s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `hb_applist` [ RunTime:0.0014s ]
+SQL: INSERT INTO `hb_applist` (`app_name`,`app_id`,`app_desc`,`app_desc1`,`logo`,`create_time`) VALUES ('猫猫','wx1313213213','小猫猫','小猫猫2','admin/20180423/5addd54930f48.jpg','1524487507') [ RunTime:0.0015s ]
+NOTIC: [8] Undefined index: url /www/web/dati_jrzf123_top/public_html/application/Common/Controller/AppframeController.class.php 第 22 行.
+
+[ 2018-04-23T20:45:07+08:00 ] 113.65.28.155 /index.php/Admin/TGsetting/appList?sEcho=3&iColumns=6&sColumns=%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=3&mDataProp_0=id&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=app_name&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=logo&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=false&mDataProp_3=app_desc&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=app_desc1&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&_=1524487430070
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000295s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000319s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `hb_applist` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hb_applist` LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`logo`,`app_name`,`app_desc`,`app_desc1`,`app_id`,FROM_UNIXTIME(`create_time`,"%Y-%m-%d %H:%i:%S") as create_time FROM `hb_applist` ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000314s ]
+
+[ 2018-04-23T20:45:35+08:00 ] 113.65.28.155 /index.php/Admin/TGsetting/ajaxDelTG
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000412s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000372s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000408s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `hb_applist` [ RunTime:0.0012s ]
+SQL: DELETE FROM `hb_applist` WHERE `id` = 4 [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: url /www/web/dati_jrzf123_top/public_html/application/Common/Controller/AppframeController.class.php 第 22 行.
+
+[ 2018-04-23T20:45:35+08:00 ] 113.65.28.155 /index.php/Admin/TGsetting/appList?sEcho=5&iColumns=6&sColumns=%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=3&mDataProp_0=id&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=app_name&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=logo&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=false&mDataProp_3=app_desc&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=app_desc1&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&_=1524487430071
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000304s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000268s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_applist` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hb_applist` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`logo`,`app_name`,`app_desc`,`app_desc1`,`app_id`,FROM_UNIXTIME(`create_time`,"%Y-%m-%d %H:%i:%S") as create_time FROM `hb_applist` ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000435s ]
+
+[ 2018-04-23T20:46:27+08:00 ] 113.65.28.155 /index.php/Admin/Psetting/prizeList?sEcho=1&iColumns=6&sColumns=%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=3&mDataProp_0=id&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=prize_name&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=prize_img&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=false&mDataProp_3=prize_num&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=prize_price&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&_=1524487579938
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000285s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000307s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_prizes` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hb_challenge` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `hb_express_info` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hb_prizes` WHERE `del` = 0 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `id`,`prize_name`,`prize_img`,FROM_UNIXTIME(`create_time`,"%Y-%m-%d %H:%i:%S") as create_time,`prize_price`,`prize_num` FROM `hb_prizes` WHERE `del` = 0 ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000362s ]
+
+[ 2018-04-23T20:47:36+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000283s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000264s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0152s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0023s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0024s ]
+
+[ 2018-04-23T20:47:37+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000402s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000259s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0024s ]
+
+[ 2018-04-23T20:48:08+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000280s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000262s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000289s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T20:48:09+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000283s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000895s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000260s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0014s ]
+
+[ 2018-04-23T20:48:10+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000354s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000265s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T20:52:45+08:00 ] 113.65.28.155 /index.php/Admin/Psetting/exchangeInfoList?sEcho=1&iColumns=6&sColumns=%2C%2C%2C%2C%2C&iDisplayStart=0&iDisplayLength=10&mDataProp_0=id&sSearch_0=&bRegex_0=false&bSearchable_0=true&bSortable_0=true&mDataProp_1=nick_name&sSearch_1=&bRegex_1=false&bSearchable_1=true&bSortable_1=false&mDataProp_2=prize_name&sSearch_2=&bRegex_2=false&bSearchable_2=true&bSortable_2=false&mDataProp_3=create_time&sSearch_3=&bRegex_3=false&bSearchable_3=true&bSortable_3=true&mDataProp_4=status&sSearch_4=&bRegex_4=false&bSearchable_4=true&bSortable_4=true&mDataProp_5=&sSearch_5=&bRegex_5=false&bSearchable_5=true&bSortable_5=true&sSearch=&bRegex=false&iSortCol_0=0&sSortDir_0=asc&iSortingCols=1&_=1524487957628
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000279s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000283s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `hb_prizes` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `hb_challenge` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hb_express_info` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hb_challenge` WHERE `prize_id` >0 AND `del` = 0 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.id,u.nick_name,p.prize_name,a.status,FROM_UNIXTIME(a.`create_time`,"%Y-%m-%d %H:%i:%S") as create_time FROM hb_challenge a LEFT JOIN hb_wx_user u ON a.openid=u.openid LEFT JOIN hb_prizes p ON a.prize_id=p.id  WHERE `prize_id` >0 AND a.del = 0 ORDER BY create_time DESC LIMIT 0,10   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000361s ]
+
+[ 2018-04-23T21:15:18+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000285s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000859s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000269s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000297s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T21:15:18+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000324s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000273s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0022s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0016s ]
+
+[ 2018-04-23T21:15:19+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000284s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000284s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0019s ]
+
+[ 2018-04-23T21:15:19+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000282s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000290s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0015s ]
+
+[ 2018-04-23T21:15:43+08:00 ] 59.60.88.60 /index.php/Admin/public/dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000270s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000332s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000361s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `hb_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hb_role_user` [ RunTime:0.0011s ]
+SQL: SELECT `role_id` FROM hb_role_user a INNER JOIN hb_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0008s ]
+SQL: UPDATE `hb_users` SET `user_login`='admin',`user_pass`='###5998c74b2c02676d58c4e6a1356fb203',`user_nicename`='管理员',`user_email`='',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`='',`last_login_ip`='59.60.88.60',`last_login_time`='2018-04-23 21:15:43',`create_time`='2000-01-01 00:00:00',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='' WHERE `id` = '1' [ RunTime:0.0029s ]
+
+[ 2018-04-23T21:23:31+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000287s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000265s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0031s ]
+
+[ 2018-04-23T21:23:33+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000353s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000990s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000391s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T21:23:35+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000287s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000264s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000290s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T21:23:36+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000292s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000880s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000287s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0007s ]
+
+[ 2018-04-23T21:23:37+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000344s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000279s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T21:23:40+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000366s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000310s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0015s ]
+
+[ 2018-04-23T21:23:41+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000272s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000830s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000289s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T21:25:51+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000351s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001068s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000277s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0012s ]
+
+[ 2018-04-23T21:25:52+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000285s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000292s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0014s ]
+
+[ 2018-04-23T21:25:53+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000283s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000816s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000285s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T21:25:53+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000328s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000272s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0019s ]
+
+[ 2018-04-23T21:25:54+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000273s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000289s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0014s ]
+
+[ 2018-04-23T21:27:49+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000374s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000439s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0007s ]
+
+[ 2018-04-23T21:27:50+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000313s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001029s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000290s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0103s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0016s ]
+
+[ 2018-04-23T21:27:50+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000270s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000258s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0014s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T21:27:50+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000386s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001146s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000403s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0011s ]
+
+[ 2018-04-23T21:27:52+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000461s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001276s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000444s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0014s ]
+
+[ 2018-04-23T22:06:30+08:00 ] 113.65.28.155 /index.php/Admin/public/dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000281s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000266s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `hb_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_role_user` [ RunTime:0.0011s ]
+SQL: SELECT `role_id` FROM hb_role_user a INNER JOIN hb_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0011s ]
+SQL: UPDATE `hb_users` SET `user_login`='admin',`user_pass`='###5998c74b2c02676d58c4e6a1356fb203',`user_nicename`='管理员',`user_email`='',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`='',`last_login_ip`='113.65.28.155',`last_login_time`='2018-04-23 22:06:30',`create_time`='2000-01-01 00:00:00',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='' WHERE `id` = '1' [ RunTime:0.0014s ]
+
+[ 2018-04-23T22:06:38+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000459s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001099s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000289s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0016s ]
+
+[ 2018-04-23T22:06:38+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000295s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000981s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000421s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000456s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:06:39+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000306s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000262s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000289s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0017s ]
+
+[ 2018-04-23T22:06:40+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000295s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000288s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:06:41+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000327s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000268s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0039s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0014s ]
+
+[ 2018-04-23T22:10:07+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000307s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000265s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:10:08+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000328s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000274s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0008s ]
+
+[ 2018-04-23T22:10:09+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000289s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000374s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000407s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0043s ]
+
+[ 2018-04-23T22:10:09+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000280s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000293s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0021s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0034s ]
+
+[ 2018-04-23T22:10:10+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000340s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000301s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0015s ]
+
+[ 2018-04-23T22:10:13+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000387s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000416s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0014s ]
+
+[ 2018-04-23T22:10:13+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000303s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000929s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000287s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:10:15+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000302s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000847s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000266s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0014s ]
+
+[ 2018-04-23T22:10:17+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000274s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000837s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000280s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0014s ]
+
+[ 2018-04-23T22:10:18+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000299s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000265s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:10:19+08:00 ] 113.65.28.155 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000270s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000261s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0016s ]
+
+[ 2018-04-23T22:18:12+08:00 ] 59.60.88.60 /index.php/Admin/public/dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000281s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000310s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `hb_role_user` [ RunTime:0.0009s ]
+SQL: SELECT `role_id` FROM hb_role_user a INNER JOIN hb_role as b on a.role_id =b.id  WHERE `user_id` = '1' AND `status` = 1  [ RunTime:0.0008s ]
+SQL: UPDATE `hb_users` SET `user_login`='admin',`user_pass`='###5998c74b2c02676d58c4e6a1356fb203',`user_nicename`='管理员',`user_email`='',`user_url`='',`avatar`=NULL,`sex`='0',`birthday`='2000-01-01',`signature`='',`last_login_ip`='59.60.88.60',`last_login_time`='2018-04-23 22:18:12',`create_time`='2000-01-01 00:00:00',`user_activation_key`='',`user_status`='1',`score`='0',`user_type`='1',`coin`='0',`mobile`='' WHERE `id` = '1' [ RunTime:0.0014s ]
+
+[ 2018-04-23T22:19:07+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000278s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000275s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0011s ]
+
+[ 2018-04-23T22:19:07+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000288s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000268s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0015s ]
+
+[ 2018-04-23T22:19:09+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000345s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000341s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:19:09+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000299s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000397s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000431s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:19:09+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000394s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000266s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:19:14+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000256s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000276s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000346s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":1,\"ind_share\":1,\"card_btn\":0,\"fail_share\":1}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:23:07+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000411s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000101s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000390s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000419s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:23:12+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000280s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000265s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0014s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":1,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:23:27+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000276s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000295s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":1,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0006s ]
+
+[ 2018-04-23T22:23:28+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000275s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000266s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":1,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:23:30+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000400s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001198s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000388s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":0,\"ind_share\":0,\"card_btn\":1,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0016s ]
+
+[ 2018-04-23T22:23:31+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000281s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000266s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":1,\"zl_share\":1,\"zj_share\":1,\"jh_share\":1,\"ind_share\":0,\"card_btn\":1,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0025s ]
+
+[ 2018-04-23T22:24:24+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000285s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000823s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000318s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":1,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+
+[ 2018-04-23T22:24:25+08:00 ] 59.60.88.60 /index.php/Admin/Gsetting/switchSetting
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000281s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000289s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `hb_users` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `hb_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `hb_options` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: configs /www/web/dati_jrzf123_top/public_html/application/Admin/Controller/GsettingController.class.php 第 86 行.
+SQL: SELECT * FROM `hb_options` WHERE ( option_name='switch_options' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `hb_options` SET `option_name`='switch_options',`option_value`='{\"share_btn\":0,\"zl_share\":0,\"zj_share\":0,\"jh_share\":0,\"ind_share\":0,\"card_btn\":0,\"fail_share\":0}' WHERE `option_name` = 'switch_options' [ RunTime:0.0013s ]
+

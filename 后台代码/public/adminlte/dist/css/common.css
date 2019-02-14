@@ -1,0 +1,473 @@
+li{
+    list-style:none;
+}
+.ml30{ margin-left: 30px; }
+
+/*红色*/
+.colred{ color: #FF6C5F }
+
+.colgreen{ color: #42CF74; }
+
+.cell-right{
+    text-align: right;
+    color: #666;
+}
+/*提示*/
+.ts{
+    color: #666;
+    font-size: 14px;
+}
+
+/*有li nav的,div相对应改变的块*/
+.content-body{
+    display: none;
+    padding: 10px;
+
+}
+.content-body.content0{
+    display: block;
+}
+
+/*操作成功弹框*/
+#dark_ts{
+    display: none;
+}
+.dark_bg{ float:left;position:fixed;top:0%;left:0%;width:100%;height:100%;z-index:99;}
+.white_content{ position:fixed; background:rgba(0,0,0,.8); top:25%; left:42%; width:200px;;height:100px; border-radius: 4px; padding:16px; z-index:100;overflow:auto;}
+.white_content p{ text-align: center; margin: auto; }
+
+/*单选框样式*/
+input[type="radio"] + label::before {
+    content: "\a0"; /*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    width: 1em;
+    height: 1em;
+    margin-right: .4em;
+    border-radius: 50%;
+    border: 1px solid #42CF74;
+    text-indent: .15em;
+    line-height: 1;
+}
+input[type="radio"]:checked + label::before {
+    background-color: #42CF74;
+    background-clip: content-box;
+    padding: .2em;
+}
+input[type="radio"] {
+    position: absolute;
+    /*clip: rect(0, 0, 0, 0);*/
+    opacity: 0;
+}
+
+.radio-btn input { display: inline-block; padding: 0; margin: 0; border: 0; left: 3px; top: 16px;}
+.radio-btn label{ color: #666; font-weight: normal; }
+.see, .notsee {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 40px;
+    display: inline-block;
+}
+.ind_share label {
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.ind_share input {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    margin: auto;
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.form-control.img_input{
+    border:none;
+    width: 124px;
+    height: 124px;
+    position: absolute;
+    left: 38%;
+    top:0;
+    opacity: 0
+}
+
+/*intup1框样式 start*/
+input.input1 {
+  width: 300px;
+  height: 36px;
+  padding-left: 10px;
+}
+input.input1:active{ border:1px solid #8E9DC6; outline:#8E9DC6}
+input.input1:focus{ border:1px solid #8E9DC6; outline:#8E9DC6}
+/*intup1框样式 end*/
+
+textarea.input2 {
+  width: 600px;
+  height: 130px;
+  padding-left: 10px;
+}
+
+textarea.input2:active{ border:1px solid #8E9DC6; outline:#8E9DC6}
+textarea.input2:focus{ border:1px solid #8E9DC6; outline:#8E9DC6}
+
+
+/*左边栏*/
+.main-sidebar .zhy_logo{
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 620px;*/     /*如果要图标固定不动,+这个属性*/
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    text-align: center;
+    /*margin-left: 16px;*/
+}
+.main-sidebar .zhy_logo img{
+    width: 152px;
+    height: auto;
+}
+#example1 td{
+    vertical-align: middle;
+}
+#example1 td img{
+    height: 50px;
+    width: auto;
+}
+#example1 td p{
+    /*display: inline-block;*/
+}
+/*上传图片显示图片*/
+#imageview{
+    display: block;
+    margin: 0 auto;
+}
+#fa_pic_ico{
+    font-size: 100px;
+    text-align: center;
+    color:#d2d2d2;
+    display: block;
+    position: relative;
+}
+
+/*保存按钮*/
+.btn_area{
+    text-align: center;
+    padding: 30px 0;
+}
+.save_btn{
+    color: #fff;
+    background: #F2B33F;
+    border:none;
+    padding: 6px 22px;
+    border-radius: 4px;
+    outline: none;
+}
+.save_btn:active{
+    background: #E5A73E;
+}
+
+/*添加按钮*/
+.add_btn{
+    color: #fff;
+    background: #42CF74;
+    border:none;
+    padding: 6px 22px;
+    border-radius: 4px;
+    outline: none;
+    margin-left: 30px;
+}
+.add_btn:hover{
+    outline: none;
+    border:none;
+    color: #fff;
+    background: #46C471;
+}
+.add_btn:active{
+    outline: none;
+    border:none;
+    color: #fff;
+    background: #46C471;
+}
+.add_btn:visited{
+    outline: none;
+    border:none;
+    color: #fff;
+    background: #46C471;
+}
+/*红色按钮*/
+
+.red_btn{
+    color: #fff;
+    background: #FF6C5F;
+    border:none;
+    padding: 6px 22px;
+    border-radius: 4px;
+    outline: none;
+    margin-left: 30px;
+}
+.red_btn:hover{
+    outline: none;
+    border:none;
+    color: #fff;
+    background: #FF6C5F;
+}
+.red_btn:active{
+    outline: none;
+    border:none;
+    color: #fff;
+    background: #FF6C5F;
+}
+.red_btn:visited{
+    outline: none;
+    border:none;
+    color: #fff;
+    background: #FF6C5F;
+}
+/*添加按钮*/
+#chooes_btn{
+    color: #fff;
+    background: #42CF74;
+    border:none;
+    padding: 6px 22px;
+    border-radius: 4px;
+    outline: none;
+    margin-left: 30px;
+}
+#chooes_btn:hover{
+    outline: none;
+    border:none;
+    color: #fff;
+    background: #46C471;
+}
+#chooes_btn:active{
+    outline: none;
+    border:none;
+    color: #fff;
+    background: #46C471;
+}
+#chooes_btn:visited{
+    outline: none;
+    border:none;
+    color: #fff;
+    background: #46C471;
+}
+
+/*修改按钮*/
+
+/*table里的操作按钮样式*/
+.table_btn{
+    border:none;
+    outline: none;
+    padding: 0 10px;
+    color: #FF6C5F;
+    background: none;
+}
+.table_btn:hover{
+    color: #FF6C5F;
+    background: #DFDFDF;
+}
+.table_btn:active{
+    color: #FF6C5F;
+    background: #DFDFDF;
+}
+.table_btn:visited{
+    color: #FF6C5F;
+    background: none;
+}
+
+/*表格*/
+.thead{
+    background: #96B0DF;
+}
+.thead th{
+    color: #ffffff;
+    text-align: center;
+}
+.table-striped>tbody>tr{
+    text-align: center;
+}
+
+/*搜索框*/
+div.dataTables_wrapper div.dataTables_filter{
+    text-align: left;
+}
+
+
+/*概况统计---5个数据块 start*/
+.index_block_data{
+    height: 120px;
+    width: 100%;
+    overflow: hidden;
+    padding: 0
+}
+.index_block_data>li{
+    width:19.8%;
+    margin: 0 0.1%;
+    height: 100%;
+    float:left;
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+.index_block_data>li>p{
+  font-size: 16px;
+  padding-top: 8px;
+}
+.index_block_data>li.li1{
+    background: #7FA0FF;
+}
+.index_block_data>li.li2{
+    background: #C47FFF;
+}
+.index_block_data>li.li3{
+    background: #FFA886;
+}
+.index_block_data>li.li4{
+    background: #FF7FB8;
+}
+.index_block_data>li.li5{
+    background: #7FD9FF;
+}
+/*概况统计---5个数据块 end*/
+
+/*游戏设置 start*/
+.g_set{
+    overflow: hidden;
+}
+.g_set div{
+    margin-top: 20px;
+    line-height: 36px;
+}
+.g_set .col-xs-4{
+    /*text-align: right;*/
+    line-height: 36px;
+}
+/*游戏设置 end*/
+
+/*内容块里的导航栏 start*/
+.nav-content{
+    white-space: nowrap;
+    overflow-x: scroll;
+    width: 100%;
+}
+.nav-content ul{
+    width: auto;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    margin: 0px 20px 10px;
+    padding: 0;
+}
+.nav-content li{
+    padding: 6px 14px;
+    float: left;
+}
+.nav-content li.on{
+    border-bottom: 2px solid #FF6C5F;
+}
+/*内容块里的导航栏 end*/
+
+/*switch 按钮 start*/
+.fun-switch{
+    padding: 20px 0;
+}
+.fun-switch p{
+    display: inline-block;
+    font-size: 16px;
+    color: #333;
+    float: left;
+    margin-top: 4px;
+    margin-right: 20px;
+}
+.fun-switch .switch-bg{
+    display: inline-block;
+}
+/*switch 按钮 end*/
+
+/*游戏设置 start*/
+/*游戏题目类型设置 start*/
+.Gsetting .box .content1 .col-xs-2{
+    margin-top: 12px;
+}
+.share-conten{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+/*游戏题目类型设置 end*/
+/*游戏设置 end*/
+
+/*题库设置 start*/
+/*题库类型设置 start*/
+.typeindex_txt{
+    margin: 0 20px;
+}
+.typeindex_txt .col-xs-6{
+    margin-top: 20px;
+}
+    /*题库导入页的*/
+.typeindex_txt .col-xs-12{
+    /*题库导入页的*/
+    margin-top: 20px;
+}
+.typeindex_txt .tkinto-btn{
+    padding:0  130px;
+}
+.typeindex_txt .tkinto-btn .add_btn{
+    margin: 20px 30px 10px 0;
+}
+.typeindex_txt .tkinto-btn .save_btn{
+    margin-top: 30px;
+}
+.typeindex_txt .tkinto-btn .selset_txt{
+    /*display: none;*/
+    border: none;
+    outline: none;
+    width: 70%;
+}
+    /*题库导入页的*/
+.typeindex_txt p{
+    display: inline-block;
+    margin-right: 30px;
+}
+.typeindex_txt p.tkinto_p{
+    display: block;
+}
+.typeindex_txt select{
+    width: 300px;
+    height: 36px;
+}
+.typeindex_txt select:hover{ border:1px solid #8E9DC6; outline:#8E9DC6}
+.typeindex_txt select:active{ border:1px solid #8E9DC6; outline:#8E9DC6}
+.typeindex_txt select:focus{ border:1px solid #8E9DC6; outline:#8E9DC6}
+/*题库类型设置 end*/
+/*题库设置 end*/
+
+
+/*小程序设置 start*/
+.appsetting .col-xs-9 .save_btn{
+    line-height: 24px;
+}
+/*小程序设置 end*/
+
+/*客服自动回复设置 start*/
+.Custsetting .input1{
+    width:600px;
+}
+.col-xs-11 .save_btn{
+    line-height: 24px;
+    margin:20px 0;
+}
+/*客服自动回复设置 end*/
+
+/*弹框里的img大小*/
+#imageview{
+    max-width: 500px;
+}

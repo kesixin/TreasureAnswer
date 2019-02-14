@@ -1,0 +1,94 @@
+<admintpl file="header" />
+<style type="text/css">
+
+    .nav-tabs>li>a {
+        color: #95a5a6;
+    }
+    .nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus {
+        color: #39f;
+        background-color: transparent;
+        border: none;
+    }
+    .btn-primary {
+        background: #66CCFF;
+    }
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+        background-color: #4d94b7;
+    }
+    .form-actions {
+        background-color: transparent;
+    }
+    .btn-danger {
+        background: #FF708D;
+
+    }
+    .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
+        background: #d25a72;
+    }
+    .pagination>a {
+      color: #39f;
+    }
+    .table-bordered {
+        border-collapse: collapse;
+    }
+    .table-bordered tr>th {
+        color: #39f;
+    }
+    .table-bordered tr>td>a {
+        color: #39f;
+    }
+    .table-bordered tr>td>a.js-ajax-delete {
+    	color: #ff0000;
+    }
+    .table-bordered tr>td>a.js-ajax-dialog-btn {
+    	color: #ccc;
+    }
+    .btn_sort {
+		background: #6c9;
+    }
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('user/index')}">{:L('ADMIN_USER_INDEX')}</a></li>
+			<li class="active"><a href="{:U('user/add')}">{:L('ADMIN_USER_ADD')}</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form" action="{:U('User/add_post')}">
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label">{:L('USERNAME')}</label>
+					<div class="controls">
+						<input type="text" name="user_login">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">{:L('PASSWORD')}</label>
+					<div class="controls">
+						<input type="password" name="user_pass">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">{:L('EMAIL')}</label>
+					<div class="controls">
+						<input type="text" name="user_email">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">{:L('ROLE')}</label>
+					<div class="controls">
+						<foreach name="roles" item="vo">
+						<label class="checkbox inline"><input value="{$vo.id}" type="checkbox" name="role_id[]" <if condition="sp_get_current_admin_id() neq 1 && $vo['id'] eq 1">disabled="true"</if>>{$vo.name}</label>
+						</foreach>
+					</div>
+				</div>
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('ADD')}</button>
+				<a class="btn" href="javascript:history.back(-1);">{:L('BACK')}</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!--overdue/overdue.wxml-->
+<view class='overduedark_bg {{overdue ? "on" : ""}}' >
+  <view class='overduelingth_bg'>
+    <!-- <image src='/images/db/prize/tjcg_ico.png'></image> -->
+    <view class='tit'>提示</view>
+    <!-- <view class='content'>提示:信息审核需要1-3个工作日,如需查询奖品处理状态,请联系在线客服或添加<text >＂{{app_name}}＂</text>微信公众号查询</view> -->
+    <view class='content'>请求超时,点击重新请求!</view>
+    <view class='ok_btn' bindtap='overdue_btn'>确定</view>
+  </view>
+</view>

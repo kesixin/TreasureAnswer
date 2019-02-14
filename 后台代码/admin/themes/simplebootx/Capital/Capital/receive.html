@@ -1,0 +1,111 @@
+<admintpl file="header" />
+<style type="text/css">
+
+    .nav-tabs>li>a {
+        color: #95a5a6;
+    }
+    .nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus {
+        color: #39f;
+        background-color: transparent;
+        border: none;
+    }
+    .btn-primary {
+        background: #66CCFF;
+    }
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+        background-color: #4d94b7;
+    }
+    .form-actions {
+        background-color: transparent;
+    }
+    .btn-danger {
+        background: #FF708D;
+
+    }
+    .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
+        background: #d25a72;
+    }
+    .pagination>a {
+      color: #39f;
+    }
+    .table-bordered {
+        border-collapse: collapse;
+    }
+    .table-bordered tr>th {
+        color: #39f;
+    }
+</style>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="{:U('Capital/pay')}">领取红包明细</a></li>
+		<!--<li><a href="{:U('Capital/pay')}">已支付</a></li>-->
+		<!--<li><a href="{:U('Capital/pay')}">未支付</a></li>-->
+	</ul>
+	<form class="well form-search" method="post" action="{:U('Capital/pay')}">
+		时间：
+		<input type="text" name="start_time" class="js-datetime" value="{:I('request.start_time/s','')}" style="width: 120px;" autocomplete="off">-
+		<input type="text" class="js-datetime" name="end_time" value="{:I('request.end_time/s','')}" style="width: 120px;" autocomplete="off"> &nbsp; &nbsp;
+		<input type="submit" class="btn btn-primary" value="搜索" />
+		<a class="btn btn-danger" href="{:U('Capital/pay')}">清空</a>
+	</form>
+	<table class="table table-hover table-bordered">
+		<thead>
+		<tr>
+			<th width="50">ID</th>
+			<th>发红包用户昵称</th>
+			<th>所领取的红包</th>
+			<th>昵称</th>
+			<th>头像</th>
+			<th>领取金额</th>
+			<!-- <th>领取个数</th> -->
+		<!-- 	<th>语音</th>
+			<th>语音识别答案</th> -->
+			<th>领取时间</th>
+		</tr>
+		</thead>
+		<tbody>
+		<foreach name="info" item="vo">
+			<tr>
+				<td>{$vo.id}</td>
+				<td>{$vo.send_user_name}</td>
+				<td>{$vo.quest}</td>
+				<td>{$vo.nick_name}</td>
+				<td><img src="{$vo.head_img}" width="50" height="50"/></td>
+				<td>￥{$vo.receive_amount}</td>
+				<!-- <td>{$vo.receive_num}</td> -->
+		<!-- 		<td>{$vo.voice_url}</td>
+				<td>{$vo.receive_answer}</td> -->
+				<td>{$vo.add_time}</td>
+			</tr>
+		</foreach>
+		</tbody>
+	</table>
+	<div class="pagination">{$page}</div>
+</div>
+<script src="__PUBLIC__/js/common.js"></script>
+<script>
+    $('.img-show').on('click',function(){
+        var img_src = $(this).attr('attr-img');
+        console.log(img_src);
+        //页面层-自定义
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            shadeClose: true,
+            skin: 'yourclass',
+            content: '<img src="'+img_src+'"/>'
+        });
+    })
+    // $(function(){
+    //     var iframeHeight = $("body").height();
+    //     console.log(iframeHeight);
+    //     $("#iiframe").contents().find("#iiframe").height(iframeHeight);
+    //     // $("#iiframe")
+    // })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+
+ /**index.wxss**/
+.container{
+  position: relative;
+  /* background: #ed4731; */
+  height: 100%;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #333;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.top {
+  position: relative;
+  padding-top: 30rpx;
+  font-size: 0;
+}
+.top image{
+  width: 705rpx;
+  margin: 0 22rpx;
+  height: 394rpx;
+}
+.top_text {
+  position: absolute;
+  bottom: 34rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 26rpx;
+  line-height: 30rpx;
+}
+.top_text2 {
+  position: absolute;
+  bottom: 84rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 38rpx;
+  line-height: 46rpx;
+  /* font-family: 'monospace' */
+}
+.text_red {
+  color: #a93c31;
+}
+.share_rule {
+  position: relative;
+  height: 268rpx;
+}
+.share_rule image.img {
+  width: 704rpx;
+  margin: 134rpx 22rpx 0;
+} 
+.share_text {
+  position: absolute;
+  left:83rpx;
+  bottom:52rpx;
+  color: #333;
+}
+.share_box {
+  position: absolute;
+  width: 220rpx;
+  height: 71rpx;
+  top: 162rpx;
+  left: 457rpx;
+}
+.share_box .btn_share {
+  width: 220rpx;
+  height: 71rpx;
+}
+@keyframes scroll {
+  0%{transform: translateX(-100rpx); opacity: 0}
+  15%{transform: translateX(480rpx); opacity: 1}
+  85%{transform: translateX(480rpx); opacity: 1}
+  100%{transform: translateX(-100rpx); opacity: 0}
+  }
+ .news_list-bg{
+  z-index: 8;
+  position: absolute;
+  left: -450rpx;
+  top:10%;
+  height: 70rpx;
+  width: 450rpx;
+}  
+.news_list-bg.on{
+  animation: scroll 6s linear;  
+}
+.news_list-bg .text{
+  height: 60rpx;
+  /* width: auto; */
+  width: 320rpx;
+  line-height: 62rpx;
+  padding: 0 20rpx 0 60rpx;
+  color: #fff;
+  background: rgba(0,0,0,.5);
+  display: inline-block;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top:5rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 8rpx;
+}
+.news_list-bg image{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  border:2rpx solid #fff;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.start {
+  position: relative;
+  top: 76rpx
+}
+
+.start image {
+  display: block;
+  width: 375rpx;
+  margin: 0 auto;
+}
+.rule_btn {
+  position: absolute;
+  right: 30rpx;
+  top: 10rpx;
+  background: #fff;
+  border: 4rpx solid #333;
+  padding: 8rpx 25rpx;
+  border-radius: 35rpx;
+}
+.prize {
+  position: relative;
+  margin-top: 126rpx;
+}
+.prize_title {
+  /* position: relative; */
+  display: block;
+  width: 440rpx;
+  margin: 0 auto;
+}
+.kf2_box {
+  position: relative;
+  width: 643rpx;
+  height: 102rpx;
+  margin: 18rpx auto;
+}
+.kf2_text {
+  position: absolute;
+  left: 30rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.kf2 {
+  position: absolute;
+  top: 20rpx;
+  right: 23rpx;
+  width: 202rpx;
+  height: 63rpx;
+}
+.prize_con {
+  position: relative;
+  width: 750rpx;
+  height: 795rpx;
+  margin: 0 auto;
+}
+.scroll {
+  padding: 0 55rpx; 
+  width: 750rpx; 
+  height: 795rpx;
+  box-sizing: border-box;
+}
+.prize_box {
+   position: relative; 
+  float: left;
+  overflow: hidden;
+  width: 640rpx;
+  height: 380rpx;
+  margin-bottom: 20rpx;
+}
+.prize_box image {
+  width: 100%;
+}
+.prize_text {
+  position: absolute;
+  bottom: 25rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.rule_box {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 750rpx;
+  height: 100%;
+}
+.ru_shadow {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  z-index: 0;
+}
+.ru_content {
+  position: relative;
+  width: 660rpx;
+  height: 895rpx;
+  margin: 100rpx auto 0;
+  border-radius: 10rpx;
+  z-index: 99;
+}
+.ru_content .item_bg {
+  width: 660rpx;
+}
+
+.rule_text {
+  position: relative;
+  top: 190rpx;
+  width: 630rpx;
+  height: 700rpx;
+  margin: 0 auto;
+}
+.rule_icon {
+  width: 50rpx;
+  margin: 0 20rpx 0 25rpx;
+}
+
+.ru_text {
+  color: #fff;
+  margin: 20rpx 0;
+}
+.ru_text:first-of-type {
+  padding-top: 20rpx;
+}
+.ru_text_content {
+  display: inline-block;
+  width: 520rpx;
+  /* text-align: justify; */
+  letter-spacing: 0.09em;
+  vertical-align: top;
+  line-height: 1.25em;
+}
+.ru_false {
+  position: absolute;
+  top: -5rpx;
+  right: 30rpx;
+  padding: 40rpx;
+}
+.ru_false image {
+  width: 28rpx;
+  height: 28rpx;
+}
+.rule_kf {
+  position: relative;
+  width: 400rpx;
+  margin: 0 auto;
+  padding-top: 20rpx;
+}
+.rule_kf image{
+  width: 400rpx;
+}
+
+/* 问答  */
+.container_bg {
+  position: absolute;
+  top: -90rpx;
+  left: 0;
+  width: 750rpx;
+  z-index: 0;
+}
+.footer{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  padding-top: 10rpx;
+  box-shadow: 0 0 30rpx rgba(0,0,0,.1);
+  /* left: 3%; */
+}
+.footer-nav{
+  display: block;
+  width: 33.333%;
+  text-align:center;
+  font-size: 0;
+  transform: scale(1);
+  transition: transform .5s;
+}
+.footer-nav.scale{
+  transform: scale(1.08)
+}
+.footer-nav image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.footer-nav view{
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+
+
+.loading{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #7FA0FF;
+  opacity: 1;
+}
+ .loading.on{
+  opacity: 0;
+  transform: scale(0.001);
+  animation: runs .3s linear;
+}
+@keyframes runs{
+  0%{transform: scale(1);opacity: 1;}
+  99%{transform: scale(1);opacity: 0;}
+  100%{transform: scale(0.001);opacity: 0;}
+} 
+.loading .logo{
+  width: 500rpx;
+  margin-top: 200rpx;
+  margin-left: 100rpx;
+}
+.loading .zhy_logo{
+padding-bottom: 20rpx;
+}
+.loading .zhy_logo image{
+  width: 194rpx;
+  height: 80rpx;
+}
+
+.progressBar{
+  width: 500rpx;
+  position: absolute;
+  top: 660rpx;
+  left: 125rpx;
+  text-align: center;
+}
+.progressBar .percent{
+  color: #fff;
+  font-size: 44rpx;
+}
+.progressBar .tBar{
+  width: 496rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+  border:4rpx solid #fff;
+  margin-top: 10rpx;
+  overflow: hidden;
+}
+.progressBar .tBar view{
+  height: 100%;
+  float: left;
+  background: #fff;
+  /* transition: width .3s; */
+  border-radius: 10rpx;
+}
+
+.load-bottom{
+  width: 100%;
+  position: absolute;
+  bottom: 20rpx;
+  text-align: center;
+}
+.load-bottom .load-txt{
+  font-size: 22rpx;
+  color: #fff;
+  line-height: 40rpx;
+
+}
+
+/* 无挑战次数显示的弹框 */
+.dark_bg{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.lingth_bg{
+  width: 600rpx;
+  margin:42% auto 0;
+  background: #7FA0FF;
+  text-align: center;
+  height: 42%;
+  border-radius: 10rpx;
+  position: relative;
+}
+.lingth_bg image{
+  width: 60rpx;
+  height: 106rpx;
+  position: absolute;
+  top:-106rpx;
+  right: 0;
+}
+.lingth_bg>button{
+  width:450rpx;
+  height:100rpx;
+  position: absolute;
+  left: 86rpx;
+  top:63%;
+  z-index: 2;
+  opacity: 0;
+}
+.lingth_bg .tit{
+  color: #fff;
+  font-size:46rpx;
+  /* padding: 17%; */
+  padding:17% 17% 13%;
+}
+.lingth_bg image.share_btn{
+  width: 450rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  left: 22rpx;
+  top:63%
+}
+.auth button{
+   width:450rpx;
+   margin:80rpx auto 10rpx auto;
+   text-align: center;
+}

@@ -1,0 +1,101 @@
+.container{
+  min-height: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+.con{
+  height: 100%;
+  position: relative;
+}
+.help-list {
+  display: flex;
+  flex-direction: column;
+  padding: 60rpx 30rpx 90rpx;
+}
+.list{
+  font-size: 28rpx;
+  background: #fff;
+  margin-bottom: 30rpx;
+  color: #333;
+  border-radius: 8rpx;
+}
+.list .tit{
+  line-height: 100rpx;
+  padding: 0 100rpx 0 30rpx;
+  position: relative;
+}
+.list .icon{
+  width:28rpx;
+  height: 15rpx;
+  position: absolute;
+  top: 0;
+  right: 42rpx;
+  transform: rotate(0deg);
+}
+.list.on .icon{
+  top: 88rpx;
+  transform: rotate(180deg);
+}
+.list .icon image{
+  width: 28rpx;
+  height: 15rpx;
+}
+
+.list .txt{
+  padding: 20rpx 0;
+  margin: 0 30rpx;
+  line-height: 46rpx;
+  font-size: 28rpx;
+  border-top: 2rpx solid #F2F2F2;
+  display: none;
+}
+.list.on .txt{
+  display: block
+}
+.btn{
+  display: block;
+  width: 100%;
+  margin-top: 30rpx;
+  line-height: 88rpx;
+  text-align: center;
+  /* background: #19ad19; */
+  background: #009944;
+  border-radius: 8rpx;
+}
+.btn image{
+  display: inline-block;
+  width: 52rpx;
+  height: 52rpx;
+  vertical-align: middle;
+}
+.btn text{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 32rpx;
+  color: #fff;
+}
+.foot{
+  width: 100%;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 10rpx;
+}
+.foot text{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 6rpx;
+}
+.foot .version{
+  color: #ccc;
+}
+.foot .line{
+  color: #ccc;
+}
+.foot .report{
+  display: inline-block;
+  vertical-align: middle;
+  color: #364a79;
+}

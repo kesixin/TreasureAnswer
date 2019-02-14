@@ -1,0 +1,124 @@
+<!--index.wxml-->
+<include src="../../overdue/overdue.wxml"/>
+<!-- <button class='sqbtn' wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 加载中••• </button> -->
+<!-- <block wx:else> -->
+<view class="container"  wx:if="{{!loadct}}">
+  <image src='{{thisImg ? thisImg : "/images/db/index/bg.png"}}' class='container_bg' mode='widthFix'></image>
+    <view class='top'>
+      <image src='/images/db/index/top.png' mode='widthFix'></image>
+      <text class='top_text2'>{{right}}</text> 
+      <text class='top_text'>当前共有<text class='text_red'>{{total}}</text>次参赛</text>
+    </view>
+    <view class='share_rule' >
+      <block  wx:if="{{news}}">
+        <view class='news_list-bg {{newchange ?"on" : ""}}'>
+          <image src='{{news.head_img}}'></image>
+          <text class='text'>恭喜{{news.nick_name}}获得{{news.prize_name}}</text>
+        </view>
+      </block>
+      <image class='img' mode='widthFix' src='{{share_bg}}'></image>
+      <view class='share_text'>{{share_text}}</view>
+      <view  class='share_box'>
+        <button class='btn_share' open-type="share"></button>
+      </view>
+      <view class='rule_btn' bindtap='toRule'>
+        规则
+      </view>
+    </view>
+    <view class='start'>
+      <image mode='widthFix'  bindtap='toStart' src='/images/db/index/start.gif'></image>
+    </view>
+    <!-- <view class='prize'>
+      <image src='/images/db/index/title.png' mode='widthFix' class='prize_title'></image>
+      <view class='kf2_box'>
+        <image class='item_bg' src='/images/db/index/kf2.png' mode='widthFix'></image>
+        <view class='kf2_text'>挑战成功联系客服领取娃娃</view>
+        <view class='kf2' bindtap='toStrategy'>
+          <button class='btn-kf' open-type="contact"></button>
+        </view> 
+      </view>
+      <view class='prize_con'>
+        <scroll-view class='scroll' scroll-y="true" bindscrolltolower="lower" scroll-with-animation="true">
+          <block wx:for='{{prize}}'>
+            <view class='prize_box'>
+              <image class='item_bg' src='/images/db/index/prize_box.png' mode='widthFix'></image>
+              <image mode='widthFix' class='item_con' src='{{item.src}}'></image>
+              <text class='prize_text'>{{item.text}}</text>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </view> -->
+    <!-- <view class='fr' bindtap='toStrategy'>
+        <image src='/images/wd/index/show2.png'></image>
+        <button class='btn-kf' open-type="contact"></button>
+      </view> -->
+    
+
+  <!-- 游戏规则 &times; -->
+  <view wx:if='{{rule}}' class='rule_box'>
+    <view class='ru_content'>
+      <image class='item_bg' src='/images/db/index/rule_bg.png' mode='widthFix'></image>
+      <view class='rule_text'>
+        <block wx:for='{{ruleText}}'>
+          <view class='ru_text'><image class='rule_icon' src='/images/db/index/{{index+1}}.png' mode='widthFix'></image>
+            <view class='ru_text_content'>{{item}}</view>
+          </view>
+        </block>
+        <view class='rule_kf' bindtap='toStrategy'>
+          <image src='/images/db/index/kf.png' mode='widthFix'></image>
+          <button class='btn-kf' open-type="contact"></button>
+        </view> 
+      </view>
+      <view catchtap='closeRule' class='ru_false'></view>
+    </view>
+    <view class='ru_shadow' bindtap='closeRule'></view>
+  </view>
+</view> 
+<view class='footer'>
+  <navigator class='footer-nav' hover-class="scale" url='../prizeList/prizelist'>
+    <image src='/images/tar4_on.png'></image>
+    <view>娃娃奖品</view>
+  </navigator>
+  <navigator class='footer-nav' hover-class="scale" url='../ranking/ranking'>
+    <image src='/images/tar2_on.png'></image>
+    <view>排行榜</view>
+  </navigator>
+  <navigator class='footer-nav' hover-class="scale" url='../userCenter/userCenter'>
+    <image src='/images/tar3_on.png'></image>
+    <view>个人中心</view>
+  </navigator>
+</view>
+
+<!-- 没有挑战次数的弹框 -->
+ <!-- wx:if="{{show_share}}"   -->
+<view wx:if="{{show_share}}" class='dark_bg'>
+  <view class='lingth_bg'>
+     <image bindtap='colseShare' src='/images/db/index/close.png'></image> 
+     <button open-type="share"></button>
+     <view class='tit'>分享到不同微信群挑战机会+1</view>
+     <image class='share_btn' src='/images/db/index/share_btn.png'></image> 
+  </view>
+</view>
+<!-- </block> -->
+<!-- {{!show?"on":""}} -->
+<view wx:if="{{loadct}}" class='loading {{!show?"on":""}}'>
+  <image class='logo' mode='widthFix' src='/images/db/index/logo.png'></image>
+  <view class='progressBar' style="display:{{auth==true?'block':'none'}}">
+    <view class='percent'>{{percent}}%</view>
+    <view class='tBar'><view style='width:{{percent}}%'></view></view>
+    
+  </view>
+  <view class='auth' style="display:{{auth==false?'block':'none'}}"><button wx:if="{{canIUse}}" open-type="getUserInfo" bindopensetting="reloadInit" bindgetuserinfo="reloadInit">授权登陆并继续</button>
+<view wx:else>请升级微信版本</view></view>
+  <view class='load-bottom'>
+    <view class='zhy_logo'>
+       <image src="/images/db/index/zhy_logo.png"></image> 
+    </view>
+    <view class='load-txt'>专注知识教育，营造竞赛氛围。精选知识考题，提升个人智力。</view>
+    <view class='load-txt'>严格把控题目，杜绝不良信息。分享好友挑战，共同学习进步。</view>
+    
+  </view>
+</view>
+
+

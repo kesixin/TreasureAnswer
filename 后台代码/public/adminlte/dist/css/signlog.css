@@ -1,0 +1,67 @@
+@charset "utf-8";
+*{ padding:0; margin:0;}
+html body{width:100%; height: 100%; font-family:'微软雅黑'; letter-spacing:2px;min-width: 1240px;}
+body>div{overflow: hidden; padding: 0 ; margin:0}
+li{ list-style:none;}
+img{ border:none;}
+li p{ margin:10px auto 0; font-size:14px; color:#999;}
+a{ text-decoration:none; color:#666; font-weight:300; border-radius:4px;}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+    background-color: rgba(255,255,255,0) !important
+}
+/*login*/
+.list-web{overflow: hidden; background: url('../img/login_bg.png') no-repeat center; line-height: 0}
+.l-s-bg{ margin:0 auto; padding: 7% 0;}
+.l-s-bg .zhy_logo_ico{text-align: center; margin-top: 20px;}
+.l-s-bg .zhy_logo_ico_p{color: #fff; margin-top: 16px;}
+.login_img{ width: 100px; height: 100px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; text-align: center; }
+.login_img img{height: 100%; width: 100%}
+.login_title{ color: #fff; font-size: 28px; font-weight: 300; text-align: center; padding-bottom: 30px}
+.log-sign{width: 460px; height: auto;margin:0 auto; background: rgba(0,0,0,0.7); overflow: hidden; position: relative;}
+.log-sign .log-sign-title{ margin:0 auto; }
+/*#tags{width: 174px; text-align: center; margin: 30px auto 0; overflow: hidden;}
+#tags>li{ float:left; color:#333; margin:0 auto;}
+#tags>li a{ padding:10px 15px; font-size:24px;float: left;}
+#tags>li.emptyTag{ width:30%;}
+#tags>li.selectTag{height:50px; border-top:2px solid #3ae6c5; color:#3ae6c5;}
+#tags>li.selectTag a{color:#3ae6c5; display:block; text-align: center; margin:0 auto;}*/
+#tagContent { width:100%; height:auto;}
+.tagContent_overh{width:454px; height:auto; overflow:hidden; text-align: center;}
+.tagContent { width:100%; height:100%; margin:22px 0;}
+/*#tagContent div.selectTag { display:block;}*/
+#tagContent1{ display: none; }
+.sign-bg{width: 460px; height: auto; margin:10px auto; box-shadow: 0 0 10px #ccc;}
+.sign-list ul{ overflow: hidden; }
+.log-sign li { position: relative; overflow: hidden; }
+.log-sign li i{ display: block; width: 50px; height: 30px; border-right: 1px solid #ccc; position: absolute; left: 10%; top:53%; }
+.log-sign li i.txtbox01{ background:url(../img/user.png) no-repeat center center; }
+.log-sign li i.txtbox02{ background:url(../img/pwd.png) no-repeat center center; }
+.log-sign li i.txtbox04{ background:url(../img/again-pwd.png) no-repeat center center; }
+.log-sign li i.txtbox05{ background:url(../img/mess-check.png) no-repeat center center; }
+.log-sign input{width:300px; height:40px; color: #fff; padding-left: 60px; line-height:50px; font-size:16px; margin-top:35px; outline: none; border:1px solid #999; background: none}
+.log-sign input.code-input{ padding-left: 20px; text-align: left; width: 140px; margin-left: 0; float: left; margin-left: 10%;}
+.log-sign input.special-input{ margin-top: 0; }
+.log-sign input:active{ border:1px solid #fff; outline:#fff}
+.log-sign input:focus{ border:1px solid #fff; outline:#fff}
+.log-sign li a.btn{ display: block; border: none; outline: none; width: 360px; height: 50px; line-height: 50px; font-size: 22px; color: #fff; margin:30px auto; background: #FF6C5F}
+.log-sign #v_container{float: left; margin-top: 35px; margin-left: 2px;}
+.log-sign li #v_container canvas{ overflow: hidden; padding: 6px 0; margin-bottom: 30px;}
+
+/*忘记密码块*/
+.log-sign #tagContent1 li i{border-right: none;}
+.log-sign #tagContent1 input{padding-left: 20px;}
+.get-phone-code{background: #FF6C5F; color: #fff; width: 120px; height: 36px; position: absolute; top:38px; right: 70px; border:none; border-radius: 2px;}
+
+
+/*记住密码按钮*/
+.log-sign li>p{ color: #fff;  }
+.log-sign li .rem_pwd{float: left; margin-left: 10%;}
+.log-sign li .rem_pwd span{ cursor: pointer; width: 14px; height: 14px; float: left; border: 1px solid #fff; border-radius: 2px; display: inline-block; margin-right: 4px; margin-top: 2px; }
+.log-sign li .rem_pwd span.on_check{background: url('../img/checkbox_01.png') 0 0/100%; border:none; width: 16px; height: 16px;}
+.log-sign li .tochange_pwd{ float: right; margin-right: 10%; cursor: pointer;}
+
+
+.warm_content{opacity: 0; height: 0; position: absolute; top:0; left: 0; width: 460px; background: #FF6C5F; margin: 0 auto; }
+.warm_content p{color: #fff; text-align: center; line-height: 50px;}
+
+

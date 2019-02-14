@@ -1,0 +1,146 @@
+<!--pages/prizeList/prizelist.wxml-->
+<include src="../../overdue/overdue.wxml"/>
+<view class="container">
+  <image src='/images/db/game/bg.png' class='container_bg' mode='widthFix'></image>
+  <view class='pl-nav'>
+    <view class='nav-btn'>
+      <view class='nav1 {{mode == 0 ? "on" : ""}}' data-current='0' bindtap='bindselect'>娃娃奖品</view>
+      <view class='nav2 {{mode == 1 ? "on" : ""}}' data-current='1' bindtap='bindselect'>领取记录</view>
+    </view>
+  </view>
+  <swiper class='swiper' current='{{mode}}' duration='300' bindchange='bindchange' >
+    <swiper-item>
+      <scroll-view class='ls' scroll-y="true" bindscrolltolower="lower" data-current="0" scroll-with-animation="true">
+        <view class='clear-top'></view>
+        <view>
+          <block wx:for='{{prize}}'>
+            <view class='prize_box'>
+              <image class='item_bg' src='/images/db/index/prize_box.png' mode='widthFix'></image>
+              <image mode='widthFix' class='item_con' src='{{item.prize_img}}'></image>
+              <text class='prize_text'>{{item.prize_name}}</text>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view class='ls' scroll-y="true" bindscrolltolower="lower" data-current="1" scroll-with-animation="true">
+        <view class='clear-top'></view>
+        <!-- wx:if="{{prizeList.length > 0}}" -->
+        <view wx:if="{{prizeList.length > 0}}">
+          <block wx:for="{{prizeList}}" wx:key="*this">
+            <view class='package'>
+              <view class='pa_box clearfix'>
+                <image class='fl' src='{{userInfo.avatarUrl}}'></image>
+                <view class='pa_text fl'>
+                  <view class='pa_name'>{{userInfo.nickName}}</view>
+                  <view>{{item.create_time}}</view>
+                </view>
+                <view class='fr'>
+                  <view class='text-right prizeName'>
+                    获得<text>{{item.prize_name}}</text>1个
+                  </view>
+                   <!-- wx:if='{{item.status == 0}}'  -->
+                  <view class='btn btn_r0' wx:if='{{item.status == 0}}' data-id="{{item.id}}" bindtap='toExchange'>去兑换</view>
+                  <view wx:if='{{item.status == 1 }}' class='text-right'>已兑换,请联系客服</view>
+                  <view wx:if='{{item.status == 2 }}' class='text-right'>已兑换成挑战机会</view>  
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+         <!-- wx:if="{{prizeList.length == 0 && non_dataPrize}}" -->
+        <view wx:if="{{prizeList.length == 0 && non_dataPrize}}">
+          <view class='non-data-bg'>
+            <image src="/images/db/index/non_data.png"></image>
+            <view>您暂时还没有领取到娃娃奖品</view>
+            <view>要挑战成功才能领奖品哦!</view>
+            <view class='toindex-btn' bindtap='toindex'>去挑战</view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+  <!-- 客服按钮 -->
+        <view class='kf' wx:if="{{prizeList.length > 0 && mode == 1}}">
+          <image class='' src="/images/db/prize/kf.png" mode='widthFix'></image>
+          联系客服
+          <view class='share_box'>
+            <button class='btn-kf' open-type="contact"></button>
+          </view> 
+        </view> 
+  <!-- 兑换 -->
+  <view wx:if='{{exchange}}' class='rule_box'>
+    <view class='ru_content'>
+      <view class='ru_title'>-请选择兑换类型-</view>
+      <view class='prizeMore'>
+        <view class='p_con'>
+          <view class='fl'>
+            <image src="/images/db/prize/1.png" mode='widthFix'></image>
+            兑换成娃娃奖品
+          </view>
+          <view class='fr' bindtap='tologistics'>兑换</view>
+        </view>
+        <view class='p_con'>
+          <view class='fl'>
+            <image src="/images/db/prize/2.png" mode='widthFix'></image>
+            兑换成{{excAmount}}次挑战机会
+          </view>
+          <view class='fr' bindtap='tochance' >兑换</view>
+        </view>
+      </view>
+      <view class='exchange_bottom'>
+        注意：选择兑换成{{excAmount}}次答题机会后平台将不会向您发放娃娃奖品，但您还有{{excAmount}}次通过答题获得娃娃奖品的机会！
+      </view>
+      <view catchtap='closeModel' class='ru_false'><image src='/images/db/prize/false.png'></image></view>
+    </view>
+    <view class='ru_shadow'></view>
+  </view>
+  <!-- 物流  -->
+  <view wx:if='{{logistics}}' class='logistics'>
+    <view class='text-center'>本次兑换奖品</view>
+    <view class='rgba_border'>
+      <view class='form form1'>
+        <image src="{{toprize.prize_img}}"></image>
+        <view class='exchaneg_prize_name'>{{toprize.prize_name}}</view>
+      </view>
+    </view>
+    <view class='text-center'>请填写您的兑换信息</view>
+    <view class='rgba_border'>
+      <view class='form'>
+        <form bindsubmit='submit'>
+          <view class='line-block'>
+            <view class='label'>姓名</view>
+            <input type='text' name='name' placeholder='请输入您的姓名' placeholder-style='color: #999;'></input>
+          </view>
+          <view class='line-block'>
+            <view class='label'>联系电话</view>
+            <input type="number" maxlength="11" name='phone' placeholder='请输入您的联系电话' placeholder-style='color: #999;'></input>
+          </view>
+          <view class='line-block'>
+            <view class='label'>收件地址</view>
+            <input type='text' name='address' placeholder='请输入您的详细地址' placeholder-style='color: #999;'></input>
+          </view>
+          <view class='tip'>提示: 提交前请确保您的兑换信息是否是有效信息, 否则奖品将无法寄出</view>
+          <view class='btn_bg'>
+            <button class='submit' formType="submit"></button>
+            <image src='/images/db/prize/tj_btn.png'></image>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view>
+  <!-- 提交成功 -->
+   <!--  -->
+  <view wx:if='{{okexchange}}'>
+    <view class='dark_bg'>
+      <view class='lingth_bg'>
+        <image src='/images/db/prize/tjcg_ico.png'></image>
+        <view class='tit'>提交成功,等待审核...</view>
+        <!-- <view class='content'>提示:信息审核需要1-3个工作日,如需查询奖品处理状态,请联系在线客服或添加<text >＂{{app_name}}＂</text>微信公众号查询</view> -->
+        <view class='content'>提示:信息审核需要1-3个工作日,如需查询奖品处理状态,请联系在线客服查询</view>
+        <view class='ok_btn' bindtap='back'>确定</view>
+      </view>
+    </view>
+  </view>
+</view>

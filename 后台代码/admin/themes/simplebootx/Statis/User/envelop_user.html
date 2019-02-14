@@ -1,0 +1,148 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:U('User/index')}">公众号用户分析</a></li>
+			<li class="active"><a href="{:U('User/envelop_user')}">红包用户分析</a></li>
+		</ul>
+
+		<!--总统计-->
+		<div class="well text-center" style="overflow: hidden; background: #f4f4f4;">
+			<div style="float: left; width:24%; padding: 40px 0; border-right:1px solid #fcfcfc;">注册人数 <b><font class="new_user">0</font></b></div>
+			<div style="float: left; width:24%; padding: 40px 0; border-right:1px solid #fcfcfc; border-left:1px solid #e5e5e5">发红包数量 <b><font class="cancel_user">0</font></b></div>
+			<div style="float: left; width:24%; padding: 40px 0; border-right:1px solid #fcfcfc; border-left:1px solid #e5e5e5">领红包数量 <b><font class="increase_user">0</font></b></div>
+			<div style="float: left; width:24%; padding: 40px 0; border-left:1px solid #e5e5e5">未支付红包个数 <b><font class="cumulate_user">0</font></b></div>
+		</div>
+
+		<p> 时间：
+			<input type="text" name="begin_date" class="js-datetime" value="{$formget.start_time|default=''}" style="width: 120px; margin-top:10px;" autocomplete="off">-
+			<input type="text" class="js-datetime" name="end_date" value="{$formget.end_time|default=''}" style="width: 120px; margin-top:10px;" autocomplete="off">
+			<input type="submit" class="btn btn-primary" name="submit" value="确定">
+		</p>
+		<div id="line" style="width:100%;height:492px;"></div>
+	</div>
+
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script src="__PUBLIC__/js/echarts/echarts.min.js"></script>
+	<script src="__PUBLIC__/js/layer/layer.js"></script>
+
+<script>
+	//趋势图变量初始化
+	var userInfoObject={},
+		$info={
+        //饼图
+		chart:function () {
+            var myChart = echarts.init(document.getElementById('line'));
+            var option = {
+                title: {
+                    text: '红包用户分析',
+                    x:'center'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    show: true,
+                    formatter: "{a} <br/>{b} : {c} ({d}%)>"
+                    //饼图中{a}表示系列名称，{b}表示数据项名称，{c}表示数值，{d}表示百分比
+                },
+                legend: {
+                    //图例
+                    orient: 'vertical',
+                    left: 'left',
+                    data: ['发红包数量','领红包数量','注册人数','未支付红包个数']
+                },
+                series: [{
+                    name: '来源',
+                    type: 'pie',
+                    radius: '55%',
+                    data: [
+                        {value:userInfoObject.enveNum,name:'发红包数量'},
+                        {value:userInfoObject.receiveNum,name:'领红包数量'},
+                        {value:userInfoObject.userNum,name:'注册人数'},
+                        {value:userInfoObject.nopaEynve,name:'未支付红包个数'},
+                    ],
+                    itemStyle: {
+                        //itemStyle有正常显示：normal，有鼠标hover的高亮显示：emphasis
+                        emphasis:{
+                            //normal显示阴影,与shadow有关的都是阴影的设置
+                            shadowBlur:10,//阴影大小
+                            shadowOffsetX:0,//阴影水平方向上的偏移
+                            shadowColor:'rgba(0,0,0,0.5)'//阴影颜色
+                        },
+                        normal:{
+                            label:{
+                                show: true,
+                                formatter: '{b} : {c} ({d}%)'
+                            },
+                            labelLine :{show:true}
+                        }
+                    }
+                }]
+            };
+            myChart.setOption(option);
+
+        },
+		//异步请求方法
+		get_userinfo:function(url,data,callback){
+            //获取用户数据
+            $.ajax({
+                url: url,
+                type: "POST",
+                dataType: "json",
+                data: data,
+                success: function (data) {
+                    callback(data);
+                }
+            });
+		},
+		//设置数据到页面
+		set_userinfo:function(res){
+			if(res.code!==20000){
+			    var msg=res.msg || res.info
+				layer.alert(msg, {
+                    skin: 'layui-layer-molv' //样式类名
+                    ,closeBtn: 0
+                    ,anim: 4 //动画类型
+                });
+			    return false;
+			}
+			//初始化饼图值
+			userInfoObject={
+				userNum:res.user_num,
+                enveNum:res.enve_num,
+				receiveNum:res.enve_receive_num,
+                nopaEynve:res.nopay_enve,
+			}
+            //总体统计赋值
+            $('.new_user').text(res.user_num);
+            $('.cancel_user').text(res.enve_num);
+            $('.increase_user').text(res.enve_receive_num);
+            $('.cumulate_user').text(res.nopay_enve);
+            $info.chart();
+		},
+		//初始化开始、结束时间
+		get_time:function(data){
+            data= data * 24 || 24
+			var myDate = new Date();
+			myDate.setTime(myDate.getTime() - data*60*60*1000);
+			s = myDate.getFullYear()+"-" + (myDate.getMonth()+1) + "-" + myDate.getDate();
+			return  s;
+		}
+	}
+	//初始化调取
+	var star_time = $info.get_time(7)+' 00:00';
+	var end_time = $info.get_time()+' 23:59';
+		$('input[name="begin_date"]').val(star_time);
+		$('input[name="end_date"]').val(end_time);
+	var url="{:U('User/envelop_user')}",
+		data = {begin_date: star_time,end_date: end_time};
+		$info.get_userinfo(url,data,$info.set_userinfo);
+
+		//确定查询时间
+		$('input[name="submit"]').on('click',function(){
+            data = {begin_date: $('input[name="begin_date"]').val(),end_date: $('input[name="end_date"]').val()};
+            $info.get_userinfo(url,data,$info.set_userinfo);
+		})
+</script>
+</body>
+</html>

@@ -1,0 +1,554 @@
+/* pages/userCenter/userCenter.wxss */
+.container {
+  height: 100%;
+  overflow:hidden;
+  position: relative;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100%;
+  z-index: 0;
+}
+.userinfo-conten {
+  position: relative;
+  height: 470rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #fff;
+}
+.tx_btn{
+  float: right;
+  width: 160rpx;
+  height: 46rpx;
+  color: #fff;
+  background: #09BA07;
+  border-radius: 50rpx;
+  font-size: 26rpx;
+  line-height: 48rpx;
+  text-align: center;
+  margin-left: 20rpx;
+}
+/*.username{
+  color: #fff;
+  width: 100%;
+  margin: 24rpx auto 0;
+  font-size: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}*/
+.userinfo-balance{
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 10rpx;
+}
+.colred{
+  color: #DE4C56;
+  font-size: 36rpx;
+  margin: 0 5rpx 0 20rpx;
+}
+.userinfo-r{
+  float: right;
+}
+.tobalance{
+  margin-top: 40rpx;
+}
+.withdraw-deposit-btn{
+  background: #DE4C56;
+  color: #FEFEFE;
+  padding: 6rpx 16rpx 6rpx;
+  font-size: 32rpx;
+  border-radius: 4rpx;
+}
+.ico{
+  float: left;
+}
+.ico image{
+  width: 36rpx;
+  height: 36rpx;
+  float: left;
+  margin-top: 4rpx;
+  margin-right: 20rpx;
+}
+.ico text{
+  float: left;
+  font-size: 32rpx;
+  color: #333;
+}
+.userinfo-r-ico{
+  
+  overflow: hidden;
+}
+.userinfo-r-ico image{
+  float: right;
+  width: 18rpx;
+  height: 30rpx;
+  margin-left: 30rpx;
+  margin-top:2px;
+}
+.userinfo-r-ico text{
+  font-size: 28rpx;
+  color: #999;
+  float: right;
+  display: block;
+}
+.mt18{
+  margin-top: 14rpx;
+}
+.borb{
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.lxkf{
+  position: relative
+}
+.lxkf .btn-kf{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.adv-bg{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 0rpx;
+  position: fixed;
+  bottom: 30rpx;
+}
+.ts{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #3E5A9D;
+}
+.ts .txt{
+  padding: 30rpx 20rpx 0;
+  display: inline-block;
+  line-height: 40rpx;
+  position: relative;
+}
+.ts .txt .btn-kf{
+  position: absolute;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.rule {
+  position: relative;
+  width: 640rpx;
+  padding-bottom: 90rpx;
+  border: 8rpx solid #c13329;
+  border-radius: 10rpx;
+  background: #fff;
+}
+.rule .icon {
+  position: absolute;
+  width: 90rpx;
+  height: 92rpx;
+  transform-origin: center center;
+}
+.rule .left1 {
+  top: 12rpx;
+  left: 12rpx;
+}
+.rule .left2 {
+  bottom: 12rpx;
+  left: 12rpx;
+  transform: rotate(-90deg);
+}
+.rule .right1 {
+  top: 12rpx;
+  right: 12rpx;
+  transform: rotate(90deg);
+}
+.rule .right2 {
+  bottom: 12rpx;
+  right: 12rpx;
+  transform: rotate(180deg);
+}
+.rule .icon image {
+  width: 90rpx;
+  height: 92rpx;
+}
+.nav {
+  position: relative;
+  width: 220rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #fff;
+  /* z-index: 3; */
+}
+.nav text {
+  position: relative;
+  z-index: 3;
+  font-size: 32rpx;
+}
+.nav image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220rpx;
+  height: 90rpx;
+  z-index: 0;
+}
+.rule_text {
+  width: 525rpx;
+}
+.ru_text {
+  line-height: 1.8em;
+  font-size: 32rpx;
+  margin-top: 15rpx;
+}
+.ru_text text {
+  font-weight: bold;
+}
+.ru_text2 {
+  margin-top: 25rpx;
+}
+.kf {
+  position: relative;
+  margin-top: 30rpx;
+  width: 480rpx;
+  height: 128rpx;
+  z-index: 3;
+}
+.kf image {
+  width: 480rpx;
+  height: 128rpx;
+}
+
+/* 问答  */
+.package {
+  position: relative;
+  margin: 0 20rpx 20rpx;
+  height: 125rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.pa_box {
+  margin-left: 30rpx;
+  padding-top: 20rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+.pa_box image {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.pa_name {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+.money {
+  margin-right: 30rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+}
+.pa_text {
+  margin-left: 30rpx;
+  line-height: 1.6em;
+}
+.ls{
+  width: 100%;
+  /* position: absolute;
+  top: 340rpx;
+  bottom: 0; */
+}
+.ls-top{
+  width: 100%;
+  height: 360rpx;
+}
+
+/* 夺宝  */
+.userinfo-head {
+  height: 180rpx;
+  padding: 25rpx 30rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+.userinfo-head .left {
+  margin-left: 20rpx;
+}
+.userinfo-avatar {
+  display: inline-block;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 4rpx solid #fff;
+  vertical-align: middle;
+}
+.userinfo_text {
+  display: inline-block;
+  height: 120rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+.userinfo_text2 {
+  overflow: hidden;
+  max-width: 320rpx;
+  line-height: 60rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.userinfo-head .fr {
+  position: relative;
+  top: 50%;
+  padding: 8rpx 20rpx;
+  border: 3rpx solid #feff82;
+  color: #feff82;
+  border-radius: 30rpx;
+  transform: translateY(-50%);
+  font-size: 24rpx;
+}
+.info-bg {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+}
+.info-block {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+.info-txt {
+  color: #feff82;
+}
+.info-txt text {
+  font-size: 40rpx;
+}
+.info-tit {
+  font-size: 24rpx;
+}
+.top_btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 40rpx 80rpx;
+}
+.top_btn .btn {
+  position: relative;
+  width: 240rpx;
+  height: 70rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border: 4rpx solid #333;
+  background: #ffcab2;
+  color: #333;
+  border-radius: 40rpx;
+  overflow: hidden;
+  font-size:28rpx;
+  padding:0;
+  margin:0 auto;
+}
+.top_btn .btn,none_xyzj{
+  margin:0 auto;
+}
+.top_btn .btn image {
+  width: 44rpx;
+  vertical-align: middle;
+}
+.moreGame_box {
+  position: relative;
+  height: 70%;
+  background: #ffdfd1;
+}
+.moreGame_head {
+  position: relative;
+  font-size: 28rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  color: #333;
+}
+.moreGame_head .center-block {
+  width: 32rpx;
+}
+.moreGame {
+  height: 509rpx;
+}
+.moreGame .package{
+  height: 150rpx;
+}
+.moreGame .pa_box image {
+  margin-top: 5rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 0;
+}
+.moreGame_box_non {
+  text-align: center;
+  position: relative;
+  padding-top: 70rpx;
+}
+.moreGame_box_non image{
+  width: 640rpx;
+  height: 360rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.moreGame_box_non_txt{
+  display: block;
+  font-size: 24rpx;
+  color: #fff;
+  position: absolute;
+  bottom: 20rpx;
+  width: 100%;
+  text-align: center;
+}
+.pa_num text{
+ color: #ff5442;
+}
+.pa_text view {
+  max-width: 220rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.moreGame .fr {
+  margin: 25rpx 20rpx 0 0;
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #ff7373;
+  color: #fff;
+  text-align: center;
+  border-radius: 30rpx;
+}
+.kf {
+  position: absolute;
+  top: -16rpx;
+  right: 0;
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 54rpx;
+  padding: 8rpx 15rpx 8rpx 20rpx;
+  background: #4ec454;
+  color: #fff;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+}
+.kf image {
+  width: 28rpx;
+  vertical-align: middle;
+  margin-top: -5rpx;
+}
+.buy {
+  position: absolute;
+  right: 0;
+  top: -15rpx;
+  background: #ff7373;
+  border-radius: 20rpx;
+  padding: 5rpx 15rpx;
+  color: #fff;
+  font-size: 20rpx;
+}
+
+.rule_box {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 750rpx;
+  height: 100%;
+  animation: opacity .5s; 
+  color: #fff;
+}
+.add_box {
+  opacity: 0;
+}
+ .rule_box.on {
+  opacity: 1;
+} 
+.ru_shadow {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 750rpx;
+  height: 100%;
+  background: rgba(0,0,0,.4);
+  z-index: 101;
+}
+.ru_content {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  padding-bottom: 50rpx;
+  margin: 0 auto; 
+  border-radius: 10rpx;
+  z-index: 999;
+}
+.ru_title {
+  margin-bottom: 50rpx;
+  padding-top: 30rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+.ru_title text {
+  color: #fff600;
+}
+.ru_false {
+  position: absolute;
+  bottom: -160rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15rpx 80rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background: #FF7372;
+  border-radius: 15rpx;
+}
+.ru_false image {
+  width: 28rpx;
+  height: 28rpx;
+}
+.ru_image {
+  position: relative;
+}
+.payment {
+  position: absolute;
+  left: 50%;
+  bottom: 46rpx;
+  width: 370rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 36rpx;
+}
+.ru_con {
+  position: relative;
+}
+.ru_con .center-block {
+  width: 608rpx;
+}
+.exchange_bottom {
+  margin: 10rpx 30rpx;
+  font-size: 24rpx;
+  line-height: 1.5em;
+  color: #fff;
+}
+.rule_box .bg {
+  width: 100%;
+  /* border-radius: 10rpx; */
+  z-index: 99;
+}
+.ru_con .userinfo-avatar  {
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: none;
+  vertical-align: middle;
+}

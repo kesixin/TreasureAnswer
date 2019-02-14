@@ -1,0 +1,127 @@
+<!--pages/userCenter/userCenter.wxml-->
+<include src="../../overdue/overdue.wxml"/>
+<view class='container'>
+  <image class='bg' src='{{thisImg ? thisImg : "/images/db/prize/bg.png"}}'></image>
+      <button class='sqbtn' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 加载中••• </button>
+      <block wx:else>
+        <view class='userinfo-conten'>
+          <view class='userinfo-head clearfix'>
+            <view class='left fl'>
+              <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" mode='widthFix'></image>
+              <view class='userinfo_text'>
+                <view class='userinfo_text2'>{{userInfo.nickName}}</view>
+                <view class='userinfo_text2'>共获得{{doll || 0}}个娃娃</view>
+              </view>
+            </view>
+            <view class='fr' bindtap='toPrize'>查看奖品 ></view>
+          </view>
+          <view class='info-bg'>
+            <view class='info-block '>
+              <view class='info-txt'><text class='info_text1'>{{challenge}}</text>次</view>
+              <view class='info-tit'>今天挑战机会</view>
+            </view>
+            <view class='info-block' bindtap='buy' wx:if='{{flag2}}'>
+              <view class='info-txt'><text class='info_text1'>{{win}}</text>张</view>
+              <view class='info-tit'>复活卡</view>
+              <view class='buy'>可购买</view>
+            </view>
+            <view class='info-block'>
+              <view class='info-txt'><text class='info_text1'>{{total}}</text>次</view>
+              <view class='info-tit'>已挑战</view>
+            </view>
+            <view class='info-block' bindtap='tosharePng'>
+              <view class='info-txt'><text class='info_text1'>1</text>个</view>
+              <view class='info-tit'>邀请码</view>
+            </view>
+          </view>
+          <view class='top_btn'>
+            <button class='btn' open-type="share" data-info='0' wx:if="{{flag4}}">
+              <image class='btn_icon' src="/images/db/prize/weixin.png" mode='widthFix'></image>炫耀战绩
+              <!-- <view class='share_box'>
+                <button class='btn_share' open-type="share" data-info='0'></button>
+              </view> -->
+            </button>
+            <button class='btn' open-type="contact">
+              <image class='btn_icon' src="/images/db/prize/kefu.png" mode='widthFix'></image>联系客服
+              <!-- <view class='share_box'>
+                <button class='btn_share' open-type="contact"></button>
+              </view> -->
+            </button>
+            <!-- <view class='btn' wx:if='{{flag}}'>
+              获得挑战机会
+              <view class='share_box'>
+                <button class='btn_share' open-type="share" data-info='1'></button>
+              </view>
+            </view> -->
+          </view>
+        </view>
+        <view class='moreGame_box' wx:if="{{moreGame.length>0}}">
+          <view class='moreGame_head'>
+          <block>
+            <view class='text-center'>更多好玩游戏</view>
+            <image class='center-block' src="/images/db/prize/bottom.png" mode='widthFix'></image>
+          </block>
+              <!-- <view class='kf'>
+              <image class='' src="/images/db/prize/kf.png" mode='widthFix'></image>
+              联系客服
+              <view class='share_box'>
+                <button class='btn-kf' open-type="contact"></button>
+              </view> 
+            </view>   -->
+          </view>
+          <scroll-view class='ls moreGame' scroll-y="true" bindscrolltolower="lower">
+            <block wx:for="{{moreGame}}" wx:key="*this">
+              <view class='package'>
+                <view class='pa_box clearfix'>
+                  <image class='fl' src='{{item.logo}}'></image>
+                  <view class='pa_text fl'>
+                    <view class='pa_name'>{{item.app_name}}</view>
+                    <view>{{item.app_desc}}</view>
+                    <view class='pa_num'><text>{{item.app_desc1}}</text></view>
+                  </view>
+                  <view class='fr' bindtap='toMore' data-id='{{item.app_id}}'>去挑战</view>
+                </view>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+        <view class='moreGame_box_non' wx:if="{{moreGame.length<=0}}">
+          <image src='/images/db/prize/none_data_img.png'></image>
+        </view>
+      </block>
+      <text class='moreGame_box_non_txt'  wx:if="{{moreGame.length<=0}}">{{jszc}}</text>
+   <!-- 兑换 -->
+  <view wx:if='{{life}}' class='rule_box'>
+    <image class='bg' src="/images/db/prize/bg.png" ></image>
+    <view class='ru_content'>
+      <view class='ru_con'>
+        <image class="center-block userinfo-avatar" src="{{userInfo.avatarUrl}}" mode='widthFix'></image>
+        <view class='ru_title'>您当前有共有<text>{{win}}</text>张复活卡</view>
+        <view class='ru_image'>
+          <image class='center-block' src="/images/db/prize/life.png" mode='widthFix'></image>
+          <view class='payment' bindtap='payment'>支付{{money}}元购买</view>
+        </view>
+        <view class='exchange_bottom'>
+          说明：复活卡微信支付{{money}}元可购买，用于答题过程中获取复活机会，每次挑战最多可使用{{excAmount}}次复活卡，使用复活卡拿到娃娃奖品几率更高哦！
+        </view>
+        <view catchtap='closeModel' class='ru_false'>取消</view>
+      </view>
+      
+    </view>
+    <!-- <view class='ru_shadow'></view> -->
+  </view>
+  <!-- <scroll-view class='ls' scroll-y="true" bindscrolltolower="lower">
+    <block wx:for="{{myList}}" wx:key="*this">
+      <view class='package'>
+        <view class='pa_box clearfix'>
+          <image class='fl' src='{{item.head_img}}'></image>
+          <view class='pa_text fl'>
+            <view class='pa_name'>{{item.nick_name}}</view>
+            <view>{{item.add_time}}</view>
+          </view>
+          <view class='fr money'>{{item.amount}}元</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>   -->
+</view>

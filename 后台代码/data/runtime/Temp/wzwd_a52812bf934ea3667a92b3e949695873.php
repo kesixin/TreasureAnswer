@@ -1,0 +1,3 @@
+<?php
+//000002592000a:16:{s:9:"user_name";s:17:""rdgztest_DWOMTK"";s:9:"nick_name";s:17:""rdgztest_DWOMTK"";s:8:"head_img";s:0:"";s:3:"sex";s:1:"0";s:6:"coutry";s:0:"";s:4:"city";s:0:"";s:8:"province";s:0:"";s:6:"openid";s:28:"oorUn44nOh6RSTrBjXG4xVORrW_I";s:7:"unionid";s:0:"";s:11:"session_key";s:24:"+MrPj+Kat/BSBAS4hy/vog==";s:7:"ip_addr";s:14:"58.247.206.143";s:11:"update_time";i:1524490615;s:8:"add_time";i:1524490615;s:6:"u_name";s:15:"rdgztest_DWOMTK";s:9:"zm_points";i:1;s:7:"user_id";s:2:"14";}
+?>

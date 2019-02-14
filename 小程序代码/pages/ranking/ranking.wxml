@@ -1,0 +1,139 @@
+<!--pages/ranking/ranking.wxml-->
+<include src="../../overdue/overdue.wxml"/>
+<button class='sqbtn' wx:if="{{!list}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 加载中••• </button>
+<block wx:else>
+  <view class="container">
+    <!-- <image src='{{thisImg ? thisImg : "/images/wd/bg.png"}}' class='container_bg'></image> -->
+    <view class='nav'>
+      <view class='{{mode == 0 ? "on" : ""}}' data-current='0' bindtap='bindselect'>智力榜</view>
+      <view class='nav-c {{mode == 1 ? "on" : ""}}' data-current='1' bindtap='bindselect'>毅力榜</view>
+      <view class='{{mode == 2 ? "on" : ""}}' data-current='2' bindtap='bindselect'>群内智力</view>
+    </view>
+    <swiper class='swiper' current='{{mode}}' duration='300' bindchange='bindchange' >
+      <swiper-item>
+        <scroll-view class='ls' scroll-y="true" bindscrolltolower="lower1" scroll-with-animation="true">
+          <view class='clear-top'></view>
+          <view class="userinfo">
+            <image class='item_bg' src='/images/db/rank/user.png' mode='widthFix'></image>
+            <view class='ls-item ls-item-user clearfix'>
+              <view class='ls-l '>
+                <text>{{myrank1}}</text>
+              </view>
+              <view class='ls-c'>
+                <view class='ls-c-img'>
+                  <image src="{{userInfo.avatarUrl}}"></image>
+                </view>
+                <view class='ls-c-txt'>
+                  <view class='fl'>
+                    <view class='ls-c-t'>{{userInfo.nickName}}</view>
+                    <!-- <view class='ls-c-b'>，成功{{mylist.passnum}}次</view> -->
+                  </view>
+                  <view class='ls-c-fr fr'>
+                    <!-- <view class='ls-c-t'>{{itemChild.point}}分</view> -->
+                    <view class='ls-c-b'>获得<text>{{myPrizeAmount || 0}}</text>个娃娃</view> 
+                  </view>
+                </view>
+              </view>
+            </view> 
+          </view>
+          <block wx:for="{{list}}"  wx:for-item="itemChild" wx:for-index="idx">
+            <view class='ls-item'>
+              <view class='ls-l ls-l{{idx+1}}'>
+                <view wx:if="{{idx<=2}}" class='img_'>
+                  <image wx:if="{{idx==0}}" src='/images/wd/ranking/rank-01.png'></image>
+                  <image wx:if="{{idx==1}}" src='/images/wd/ranking/rank-02.png'></image>
+                  <image wx:if="{{idx==2}}" src='/images/wd/ranking/rank-03.png'></image>
+                </view>
+                <text wx:if="{{idx>2}}">{{idx+1}}</text>
+              </view>
+              <view class='ls-c'>
+                <view class='ls-c-img'>
+                  <image src="{{itemChild.head_img}}"></image>
+                </view>
+                <view class='ls-c-txt'>
+                  <view class='fl'>
+                    <view class='ls-c-t'>{{itemChild.nick_name}}</view>
+                    <!-- <view class='ls-c-b'>挑战<text>{{itemChild.sendnum}}</text>次，成功{{itemChild.passnum}}次</view> -->
+                  </view>
+                  <view class='ls-c-fr fr'>
+                    <!-- <view class='ls-c-t'>{{itemChild.point}}分</view> -->
+                    <view class='ls-c-b'>获得<text>{{itemChild.prize_amount || 0}}</text>个娃娃</view> 
+                  </view>
+                </view>
+              </view>
+            </view>  
+          </block>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view class='ls' scroll-y="true" bindscrolltolower="lower2" scroll-with-animation="true">
+          <view class='clear-top'></view>
+          <view class="userinfo">
+            <image class='item_bg' src='/images/db/rank/user.png' mode='widthFix'></image>
+            <view class='ls-item ls-item-user clearfix'>
+              <view class='ls-l '>
+                <text>{{myrank2}}</text>
+              </view>
+              <view class='ls-c'>
+                <view class='ls-c-img'>
+                  <image src="{{userInfo.avatarUrl}}"></image>
+                </view>
+                <view class='ls-c-txt'>
+                  <view class='fl'>
+                    <view class='ls-c-t'>{{userInfo.nickName}}</view>
+                    <!-- <view class='ls-c-b'>，成功{{mylist.passnum}}次</view> -->
+                  </view>
+                  <view class='ls-c-fr fr'>
+                    <!-- <view class='ls-c-t'>{{itemChild.point}}分</view> -->
+                    <view class='ls-c-b'>累计挑战<text>{{myChallengeTimes}}</text>次</view> 
+                  </view>
+                </view>
+              </view>
+            </view> 
+          </view>
+          <block wx:for="{{list1}}"  wx:for-item="itemChild" wx:for-index="idx">
+            <view class='ls-item'>
+              <view class='ls-l ls-l{{idx+1}}'>
+                <view wx:if="{{idx<=2}}" class='img_'>
+                  <image wx:if="{{idx==0}}" src='/images/wd/ranking/rank-01.png'></image>
+                  <image wx:if="{{idx==1}}" src='/images/wd/ranking/rank-02.png'></image>
+                  <image wx:if="{{idx==2}}" src='/images/wd/ranking/rank-03.png'></image>
+                </view>
+                <text wx:if="{{idx>2}}">{{idx+1}}</text>
+              </view>
+              <view class='ls-c'>
+                <view class='ls-c-img'>
+                  <image src="{{itemChild.head_img}}"></image>
+                </view>
+                <view class='ls-c-txt'>
+                  <view class='fl'>
+                    <view class='ls-c-t'>{{itemChild.nick_name}}</view>
+                    <!-- <view class='ls-c-b'>挑战<text>{{itemChild.sendnum}}</text>次，成功{{itemChild.passnum}}次</view> -->
+                  </view>
+                  <view class='ls-c-fr fr'>
+                    <!-- <view class='ls-c-t'>{{itemChild.point}}分</view> -->
+                    <view class='ls-c-b'>累计挑战<text>{{itemChild.challenge_times}}</text>次</view> 
+                  </view>
+                </view>
+              </view>
+            </view>  
+          </block>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <view class='clear-top'></view>
+        <view class='share'>
+          <image class='item_bg' src='/images/db/rank/white.png' mode='widthFix'></image>
+          <view class='bottom' wx:if="{{flag3}}">
+            <view class='text-center'>转发到微信群, 查看群里智力排行</view>
+            <view class='share_box'>
+              <button class='btn_share' open-type="share">
+                <image class='' src='/images/db/rank/weixin.png' mode='widthFix'></image>
+              </button>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</block>

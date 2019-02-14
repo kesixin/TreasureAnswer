@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+.home_info li em {
+	float: left;
+	width: 120px;
+	font-style: normal;
+}
+li {
+	list-style: none;
+}
+.nav-tabs>li>a {
+    color: #95a5a6;
+}
+.nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus {
+    color: #39f;
+    background-color: transparent;
+    border: none;
+}
+.btn-primary {
+    background: #66CCFF;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+    background-color: #4d94b7;
+}
+.form-actions {
+    background-color: transparent;
+}
+.btn-danger {
+    background: #FF708D;
+
+}
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
+    background: #d25a72;
+}
+.pagination>a {
+  color: #39f;
+}
+.table-bordered {
+    border-collapse: collapse;
+}
+.table-bordered tr>th {
+    color: #39f;
+}
+p.card_head_title {
+  border-left: 2px solid #39f;
+  color: #39f !important;
+  text-indent: 10px;
+}
+</style>
+<link rel="stylesheet" href="__PUBLIC__/publicb/main.3b2351b2fd5783c56746.css" />
+</head>
+<body style="">
+
+
+		<!-- 昨日概况 -->
+                    <div data-v-6f7f7716="" class="ivu-row">
+                      <div data-v-6f7f7716="" class="ivu-card ivu-card-bordered">
+                        <div class="ivu-card-head">
+                          <p class="card_head_title" data-v-6f7f7716="" style="text-align: left;">昨日概况</p></div>
+                        <!---->
+                        <div class="ivu-card-body">
+                          <div data-v-6f7f7716="" class="ivu-row">
+
+                            <div data-v-6f7f7716="" class="ivu-col ivu-col-span-6">
+
+                              <div data-v-6f7f7716="" class="ivu-card ivu-card-dis-hover">
+                                <div class="ivu-card-head">
+                                  <p data-v-6f7f7716="">打开次数</p>
+                                  <p data-v-6f7f7716="">{$data.session_cnt|default='0'}</p></div>
+                                <!---->
+                                <div class="ivu-card-body"></div>
+                              </div>
+
+                            </div>
+                            <div data-v-6f7f7716="" class="ivu-col ivu-col-span-6">
+                              <div data-v-6f7f7716="" class="ivu-card ivu-card-dis-hover">
+                                <div class="ivu-card-head">
+                                  <p data-v-6f7f7716="">访问次数 /人数</p>
+                                  <p data-v-6f7f7716="">{$data.visit_pv|default='0'}/ {$data.visit_uv|default='0'}</p></div>
+                                <!---->
+                                <div class="ivu-card-body"></div>
+                              </div>
+                            </div>
+
+                            <div data-v-6f7f7716="" class="ivu-col ivu-col-span-6">
+                              <div data-v-6f7f7716="" class="ivu-card ivu-card-dis-hover">
+                                <div class="ivu-card-head">
+                                  <p data-v-6f7f7716="">新访问用户数</p>
+                                  <p data-v-6f7f7716="">{$data.visit_uv_new|default='0'}</p></div>
+                                <!---->
+                                <div class="ivu-card-body"></div>
+                              </div>
+                            </div>
+
+                            <div data-v-6f7f7716="" class="ivu-col ivu-col-span-6">
+                              <div data-v-6f7f7716="" class="ivu-card ivu-card-dis-hover" style="border-right: 0px;">
+                                <div class="ivu-card-head">
+                                  <p data-v-6f7f7716="">分享次数 /人数</p>
+                                  <p data-v-6f7f7716="">{$data.zfcs|default='0'}/{$data.zfrs|default='0'}</p></div>
+                                <!---->
+                                <div class="ivu-card-body"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 累计访问次数 -->
+                    <div data-v-6f7f7716="" class="echarts ivu-row" style="margin-top: 20px;">
+                      <div data-v-6f7f7716="" class="ivu-card ivu-card-bordered" style="height: 450px;width: 1019px;">
+                        <div class="ivu-card-head">
+                          <p class="card_head_title" data-v-6f7f7716="" style="text-align: left;">累计访问用户数</p></div>
+                        <!---->
+                        <div class="ivu-card-body">
+
+                            <div id="maina" style="width:966px;height:350px;">
+                              
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--昨日访问页面-->
+                    <div data-v-6f7f7716="" class="ivu-row" style="margin: 20px 0px;">
+                      <div data-v-6f7f7716="" class="ivu-card ivu-card-bordered">
+                        <div class="ivu-card-head">
+                          <p class="card_head_title" data-v-6f7f7716="" style="text-align: left;">昨日访问页面</p></div>
+                        <!---->
+                        <div class="ivu-card-body">
+                          <div data-v-6f7f7716="" class="ivu-table-wrapper">
+                            <div class="ivu-table">
+                              <!---->
+                              <div class="ivu-table-header">
+                                <table cellspacing="0" cellpadding="0" border="0" style="width: 984px;">
+                                  
+                                  <thead>
+                                    <tr>
+                                      <th class="">
+                                        <div class="ivu-table-cell">
+                                          <span>页面路径</span>
+                                          <!---->
+                                          <!----></div>
+                                      </th>
+                                      <th class="">
+                                        <div class="ivu-table-cell">
+                                          <span>访问次数</span>
+                                          <span class="ivu-table-sort">
+                                          </span>
+                                          <!----></div>
+                                      </th>
+                                      <th class="">
+                                        <div class="ivu-table-cell">
+                                          <span>访问人数</span>
+                                          <span class="ivu-table-sort">
+                                          </span>
+                                          <!----></div>
+                                      </th>
+                                      <th class="">
+                                        <div class="ivu-table-cell">
+                                          <span>进入页次数</span>
+                                          <span class="ivu-table-sort">
+                                          </span>
+                                          <!----></div>
+                                      </th>
+                                      <th class="">
+                                        <div class="ivu-table-cell">
+                                          <span>退出页次数</span>
+                                          <span class="ivu-table-sort">
+                                          </span>
+                                          <!----></div>
+                                      </th>
+                                      <th class="">
+                                        <div class="ivu-table-cell">
+                                          <span>分享次数</span>
+                                          <span class="ivu-table-sort">
+                                          </span>
+                                          <!----></div>
+                                      </th>
+                                      <th class="">
+                                        <div class="ivu-table-cell">
+                                          <span>分享人数</span>
+                                          <span class="ivu-table-sort">
+                                          </span>
+                                          <!----></div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                   <foreach name="data['pageData']" item="v" key='k' >
+                                        <if condition='$k lt 111'>
+                                          <tr>
+                                            <th class="">
+                                              <div class="ivu-table-cell">
+                                                <span style="font-size: 12px;">{$v.page_path}</span>
+                                                </div>
+                                            </th>
+                                            <th class="">
+                                              <div class="ivu-table-cell">
+                                                <span>{$v.page_visit_pv}</span>
+                                                <span class="ivu-table-sort">
+                                                </span>
+                                                <!----></div>
+                                            </th>
+                                            <th class="">
+                                              <div class="ivu-table-cell">
+                                                <span>{$v.page_visit_uv}</span>
+                                                <span class="ivu-table-sort">
+                                                </span>
+                                                <!----></div>
+                                            </th>
+                                            <th class="">
+                                              <div class="ivu-table-cell">
+                                                <span>{$v.entrypage_pv}</span>
+                                                <span class="ivu-table-sort">
+                                                </span>
+                                                <!----></div>
+                                            </th>
+                                            <th class="">
+                                              <div class="ivu-table-cell">
+                                                <span>{$v.exitpage_pv}</span>
+                                                <span class="ivu-table-sort">
+                                                </span>
+                                                <!----></div>
+                                            </th>
+                                            <th class="">
+                                              <div class="ivu-table-cell">
+                                                <span>{$v.page_share_pv}</span>
+                                                <span class="ivu-table-sort">
+                                                </span>
+                                                <!----></div>
+                                            </th>
+                                            <th class="">
+                                              <div class="ivu-table-cell">
+                                                <span>{$v.page_share_uv}</span>
+                                                <span class="ivu-table-sort">
+                                                </span>
+                                                <!----></div>
+                                            </th>
+                                          </tr>
+                                        </if>
+                                   </foreach>
+
+                                </table>
+                              </div>
+                         
+
+
+
+                              <if condition="count($data['pageData'])  eq 0">
+                                <div class="ivu-table-tip">
+                                  <table cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                          <span>暂无数据</span></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </if>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="__PUBLIC__/js/jquery.js"></script>
+
+    <script src="__PUBLIC__/js/echarts/echarts.min.js"></script>
+	<php>
+		$lang_set=defined('LANG_SET')?LANG_SET:'';
+		$thinkcmf_version=defined('THINKCMF_VERSION')?THINKCMF_VERSION:'';
+	</php>
+  <script>
+  var myChart = echarts.init(document.getElementById('maina'));
+    var option = {
+        title: {
+            text: '15日详情',
+        },
+        tooltip: {
+            trigger: 'axis'
+
+        },
+        legend: {
+            data:['累计用户'],
+        },
+        grid: {
+            left: '3%',
+            right: '3%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+         calculable : true,
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name:'累计用户',
+                type:'line',
+                stack: '总量',
+                data:['']
+            }
+        ]
+    };
+    myChart.setOption(option);
+
+    $.ajax({
+        url: 'get_day_data',
+        type: 'POST',
+        dataType: 'json',
+        success:function(data){
+            var date = data.data.date;
+            console.log(date);
+            var num = data.data.num;
+            console.log(num);
+
+            var option = myChart.getOption();
+            option.series[0].data = num;
+            option.xAxis[0].data = date;
+            myChart.setOption(option,true);
+        }
+    });
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!--pages/game/game.wxml-->
+<include src="../../overdue/overdue.wxml"/>
+<view class='container'>
+  <block wx:if='{{load}}'>
+    <view class='load_box'>
+      <image src="/images/db/game/load_bg.png" mode='widthFix'></image>
+      <view class='user'>
+        <image src='{{userInfo.avatarUrl}}' mode='widthFix'></image>
+        <view class='text-center'>{{userInfo.nickName}}</view>
+      </view>
+      <image wx:if='{{loadend}}' class='load_num' src="/images/db/game/{{loadNum}}.png" mode='widthFix'></image>
+      <view  wx:if='{{!loadend}}' class='load_end text-center'>开始</view>
+      <view class='footer text-center'>本题库由{{foot}}提供</view>
+    </view>
+  </block>
+  <block wx:else>
+    <image src="/images/db/game/bg.png" class='container_bg'></image>
+    <view class='top'>
+      <view class='top_content'>
+        <!-- <view class='top_left fl'> -->
+        <view class='top_left'>
+          <image class='item_bg' src="/images/db/game/top_left.png" mode='widthFix'></image>
+          <view class='t_l_con'>
+            <image class='radius_round' src='{{userInfo.avatarUrl}}' mode='widthFix'></image>
+            已连续答对<text>{{qaTarget}}</text>/{{length}}题
+          </view>
+        </view>
+        <!-- <view class='num center-block fr'> -->
+        <view class='num center-block'>
+          <image class='num_right {{right ? "on" : ""}}' src="/images/db/game/right.png" mode='widthFix'></image>
+          <image class='num_left {{right ? "on" : ""}}' src="/images/db/game/left.png" mode='widthFix'></image>
+          <view class='num_shadow'></view>
+          <view class='num_num'>
+            {{num}}
+          </view>
+        </view>
+      </view>
+      <view wx:if='{{mide}}' class='mide'>
+        <image class='center-block' src='/images/wz/game/record.gif'></image>
+      </view>
+    </view>
+    <view class='text-center text-title'>-第{{qaTarget+1}}题-</view>
+    <view class='textCN'>{{qa[qaTarget].question}}</view>
+    <view class='ques'>
+      <block wx:for='{{qa[qaTarget].answer}}' wx:key='*this'>
+        <view class='ques_item' bindtap='selectstart' data-key='{{index+1}}'>
+          <image wx:if='{{qaSelect == index+1}}' class='item_bg' src='{{qaShowImg ? "/images/wd/game/green.png" : "/images/wd/game/pink.png"}}'></image>
+          <image wx:if='{{qaKey == index+1}}' class='item_bg' src="/images/wd/game/green.png"></image>
+
+          <text class='{{qaSelect == index+1 ? "on" : ""}}'>{{item}}</text>
+        </view>
+      </block>
+    </view>
+    <view class='lose center-block' bindtap='tolose'>
+      <image src='/images/db/game/lose.png' class='item_bg' mode='widthFix'></image>
+    </view>
+    <view class='footer text-center'>本题库由{{foot}}提供</view>
+  </block>
+  <!-- 游戏规则 &times; -->
+  <view wx:if='{{rule}}' class='rule_box'>
+    <view class='ru_content'>
+      <image class='item_bg' src='/images/db/game/start.png' mode='widthFix'></image>
+      <view class='rule_text'>
+        <block wx:for='{{ruleText}}'>
+          <view class='ru_text'><image class='rule_icon' src='/images/db/prize/{{index+1}}.png' mode='widthFix'></image>
+            <view class='ru_text_content'>{{item}}</view>
+          </view>
+        </block>
+      </view>
+      <view class='ru_start' bindtap='closeRule'>我知道了</view>
+    </view>
+    <view class='ru_shadow'></view>
+  </view>
+
+  <!-- 红包1  -->
+  <view wx:if='{{open}}' class='openModel rule_box'>
+    <view class='ru_content'>
+      <image class='ru_bg' src="/images/wd/game/red.png" ></image>
+      <view class='text_box'>
+        <view class='open_btn' bindtap='open'>
+          <image src='/images/wd/game/open.png'></image>
+        </view>
+        <view class='ru_text text-center'>恭喜你完成了挑战, 获得赏金一份</view>
+      </view>
+    </view>
+    <view class='ru_shadow'></view>
+  </view>
+  <!-- 红包2 -->
+  <view wx:if='{{openModel}}' class='qaModel rule_box'>
+    <view class='ru_content'>
+      <image class='center-block qaModel_false' src='/images/wd/game/true.png'></image>
+      <view class='ru_title'>过关了 ~ _ ~</view>
+      <view class='ru_text text-center'></view>
+      <view class='ru_start' catchtap='open'>
+        查看赏金
+        <!-- <button class='btn_share' open-type="share"></button> -->
+      </view>
+      <!-- <view catchtap='setQaModel' class='close_false'><image src='/images/wd/game/close.png'></image></view> -->
+    </view>
+    <view class='ru_shadow'></view>
+  </view>
+  <!-- 答题错误 -->
+  <view wx:if='{{qaModel}}' class='qaModel rule_box'>
+    <view class='ru_content'>
+      <image class='item_bg' src='/images/db/game/false.png' mode='widthFix'></image>
+      <view class='rule_con'>
+        <view class='ru_title'>答错了呦 ! _ !</view>
+        <view class='ru_text text-center' wx:if="{{now < nowfrequency}}">您可以选择以下复活方式继续答题</view>
+        <view class='ru_text text-center' wx:if="{{now >= nowfrequency && flag2}}">购买复活卡</view>
+        <view class='ru_text text-center' wx:if="{{now >= nowfrequency && flag2}}">即可<text>马上复活并继续答题</text></view>
+        <view class='ru_start text-center' style='margin-top: {{flag2 ? 18 : 60}}rpx' wx:if="{{now < nowfrequency && flag6}}">
+          <button class='btn_share' open-type="share">分享到群立即复活</button>
+        </view>
+        <view class='ru_start text-center'>
+          <button class='btn_share' open-type="contact">联系客服获取更多答题次数</button>
+        </view>
+         <view class='ru_start text-center {{gray_btn? "gray":""}}' style='margin-top: {{flag6 ? 18 : 60}}rpx' bindtap='buyLife' wx:if="{{flag2}}">
+          {{life ? '使用复活卡立即复活' : fhmoney_txt}}
+        </view> 
+        <!-- <view class='ru_start text-center' bindtap='buyLife'>
+          {{life ? '使用复活卡立即复活' : revive_money}}
+        </view> -->
+        <view class='ru_start2 text-center' catchtap='setQaModel'>跳过</view>
+      </view>
+      <view catchtap='setQaModel' class='close_false'></view>
+    </view>
+    <view class='ru_shadow'></view>
+  </view>
+
+  <!-- 分数框  -->
+  <!-- <view wx:if='{{add}}' class='rule_box add_box {{add ? "on" : ""}}'>
+    <view class='ru_add'>
+      <image src='/images/wz/game/add.png'></image>
+      <view class='add_text'>+{{add_num}}</view>
+    </view>
+  </view> -->
+  <!-- 结算中  -->
+  <view wx:if='{{end}}' class='rule_box'>
+    <view class='ru_end'>
+      <image src='/images/wz/game/end.png'></image>
+      <view class='end_text'>正在结算中...</view>
+    </view>
+    <view class='ru_shadow'></view>
+  </view>
+</view>
